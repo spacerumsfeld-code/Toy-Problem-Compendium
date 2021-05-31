@@ -33,6 +33,6 @@ var intersect = function(nums1, nums2) {
 };
 
 // Performance
-// Runtime: 92 ms, faster than ~20% of JavaScript online submissions for Single Number
+// Runtime: 92 ms, faster than ~20% of JavaScript online submissions for interX of Two Arrays.
 
-// Memory Usage: 41.1 MB, less than ~21% of JavaScript online submissions for Single Number.
+// Memory Usage: 41.1 MB, less than ~21% of JavaScript online submissions for interX of Two Arrays.
