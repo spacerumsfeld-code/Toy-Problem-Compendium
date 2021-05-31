@@ -10,3 +10,19 @@
 
 // Input: nums = [0]
 // Output: [0]
+
+var moveZeroes = function(nums) {
+  let count = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+      if (nums[i] === 0) {
+          count++;
+          nums.splice(i, 1);
+          i--;
+      }
+  }
+
+  for (let j = 0; j < count; j++) {
+      nums.push(0);
+  }
+};
