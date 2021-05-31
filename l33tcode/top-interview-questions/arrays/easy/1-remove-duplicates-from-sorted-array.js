@@ -17,3 +17,8 @@ var removeDuplicates = function(nums) {
   }
   return nums.length;
 };
+
+//Performance
+//Runtime: not relevant
+
+//Memory Usage: 39.9MB, less than 99.22% of online submissions for Remove Duplicates From Sorted Array.
