@@ -26,3 +26,8 @@ var moveZeroes = function(nums) {
       nums.push(0);
   }
 };
+
+// Performance
+// Runtime: 84 ms, faster than ~78% of JavaScript online submissions for Plus One.
+
+// Memory Usage: 40.4 MB, less than ~20% of JavaScript online submissions for Plus One.
