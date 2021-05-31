@@ -19,6 +19,6 @@ var containsDuplicate = function(nums) {
 };
 
 // Performance
-// Runtime: 128 ms, faster than ~17% of JavaScript online submissions for Best Time to Buy and Sell Stock II.
+// Runtime: 128 ms, faster than ~17% of JavaScript online submissions for Contains Duplicate.
 
-// Memory Usage: 46.3 MB, less than ~34% of JavaScript online submissions for Best Time to Buy and Sell Stock II
+// Memory Usage: 46.3 MB, less than ~34% of JavaScript online submissions for Contains Duplicate.
