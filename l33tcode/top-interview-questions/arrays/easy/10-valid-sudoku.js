@@ -54,3 +54,7 @@ var isValidSudoku = function(board) {
   return true
 };
 
+// Performance
+// Runtime: 108ms, faster than ~43% of JavaScript online submissions for Valid Sudoku.
+
+// Memory Usage: 43.9 MB, less than ~29% of JavaScript online submissions for Valid Sudoku.
