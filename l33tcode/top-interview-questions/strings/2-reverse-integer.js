@@ -9,13 +9,20 @@
 // Input: s = "loveleetcode"
 // Output: 2
 
-let reverse = 0;
-const limit = 2147483648;
-while(x != 0) {
+var reverse = function(x) {
+  let reverse = 0;
+  const limit = 2147483648;
+  while(x != 0) {
     reverse = reverse * 10 + x % 10;
     x = parseInt(x/10);
-}
-if(reverse < -limit || reverse > limit) {
-    return 0
-}
-return reverse
+  }
+  if(reverse < -limit || reverse > limit) {
+    return 0;
+  }
+  return reverse
+};
+
+// Performance
+// Runtime: 112 ms, faster than 12% of JavaScript online submissions for Best Time to Buy and Sell Stock II.
+
+// Memory Usage: 40 MB, less than 16% of JavaScript online submissions for Best Time to Buy and Sell Stock II.
