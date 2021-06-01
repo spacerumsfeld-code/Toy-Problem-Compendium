@@ -11,3 +11,12 @@
 // Output: false
 // Explanation: "raceacar" is not a palindrome.
 
+var isPalindrome = function(s) {
+  if (s.length === 1) return true;
+  let alphanum = s.toLowerCase().replace(/[\W_]+/g, '');
+
+  for (let i = 0, j = alphanum.length - 1; i <= j; i++, j--) {
+      if (alphanum[i] !== alphanum[j]) return false;
+  }
+  return true;
+};
