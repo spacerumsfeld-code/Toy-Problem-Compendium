@@ -16,3 +16,8 @@ var reverseString = function(s) {
       [s[i], s[j]] = [s[j], s[i]];
   }
 };
+
+// Performance
+// Runtime: 124 ms, faster than 12% of JavaScript online submissions for Best Time to Buy and Sell Stock II.
+
+// Memory Usage: 45.7 MB, less than 63% of JavaScript online submissions for Best Time to Buy and Sell Stock II.
