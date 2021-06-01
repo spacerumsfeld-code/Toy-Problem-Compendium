@@ -26,3 +26,9 @@ var twoSum = function(nums, target) {
       else map.set(nums[i], i);
   }
 };
+
+
+// Performance
+// Runtime: 124ms, faster than ~10% of JavaScript online submissions for Plus One.
+
+// Memory Usage: 40.1 MB, less than ~15% of JavaScript online submissions for Plus One.
