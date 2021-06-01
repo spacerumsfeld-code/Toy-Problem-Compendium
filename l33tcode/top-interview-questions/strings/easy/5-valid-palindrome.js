@@ -20,3 +20,8 @@ var isPalindrome = function(s) {
   }
   return true;
 };
+
+// Performance
+// Runtime: 116 ms, faster than 12% of JavaScript online submissions for Valid Anagram.
+
+// Memory Usage: 40.6 MB, less than 93% of JavaScript online submissions for Valid Anagram.
