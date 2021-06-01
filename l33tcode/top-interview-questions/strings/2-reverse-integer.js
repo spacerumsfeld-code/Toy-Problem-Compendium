@@ -23,6 +23,6 @@ var reverse = function(x) {
 };
 
 // Performance
-// Runtime: 112 ms, faster than 12% of JavaScript online submissions for Best Time to Buy and Sell Stock II.
+// Runtime: 112 ms, faster than 12% of JavaScript online submissions for Reverse Integer.
 
-// Memory Usage: 40 MB, less than 16% of JavaScript online submissions for Best Time to Buy and Sell Stock II.
+// Memory Usage: 40 MB, less than 16% of JavaScript online submissions for Reverse Integer.
