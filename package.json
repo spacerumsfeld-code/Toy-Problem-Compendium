@@ -1,0 +1,38 @@
+{
+  "name": "toy-problem-compendium",
+  "version": "1.0.0",
+  "description": "A collection of toy problems to sharpen programming skills",
+  "main": "README.md",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spacerumsfeld-code/Toy-Problem-Compendium.git"
+  },
+  "keywords": [
+    "leetcode",
+    "edabit",
+    "algorithms",
+    "time",
+    "complexity",
+    "space",
+    "complexity",
+    "Big",
+    "O",
+    "searching",
+    "sorting",
+    "data",
+    "structures",
+    "grind"
+  ],
+  "author": "Nick Papadakis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spacerumsfeld-code/Toy-Problem-Compendium/issues"
+  },
+  "homepage": "https://github.com/spacerumsfeld-code/Toy-Problem-Compendium#readme",
+  "dependencies": {
+    "jest": "^27.0.3"
+  }
+}
