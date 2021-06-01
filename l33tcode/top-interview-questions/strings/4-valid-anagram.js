@@ -16,3 +16,22 @@
 
 // Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
 
+var isAnagram = function(s, t) {
+  if (s.length !== t.length) return false;
+  let map = new Map();
+
+  for (let char of s) {
+      let count = map.get(char) || 0;
+      map.set(char, ++count);
+  }
+
+  for (let char of t) {
+      let count = map.get(char);
+      if (!count) return false;
+      map.set(char, --count);
+  }
+  return true;
+};
+
+
+
