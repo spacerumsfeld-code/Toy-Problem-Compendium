@@ -50,3 +50,7 @@ var countAndSay = function(n) {
   return result;
 };
 
+// Performance
+// Runtime: 80 ms, faster than 85% of JavaScript online submissions for Valid Palindrome.
+
+// Memory Usage: 40.7 MB, less than 64% of JavaScript online submissions for Valid Palindrome.

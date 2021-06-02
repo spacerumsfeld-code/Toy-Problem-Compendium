@@ -32,6 +32,6 @@ var strStr = function(haystack, needle) {
 };
 
 // Performance
-// Runtime: 108 ms, faster than 22% of JavaScript online submissions for Valid Palindrome.
+// Runtime: 108 ms, faster than 22% of JavaScript online submissions for Implement strStr().
 
-// Memory Usage: 38.5 MB, less than 91% of JavaScript online submissions for Valid Palindrome.
+// Memory Usage: 38.5 MB, less than 91% of JavaScript online submissions for Implement strStr().
