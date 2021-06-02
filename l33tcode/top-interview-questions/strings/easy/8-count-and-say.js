@@ -8,7 +8,6 @@
 
 // Given a positive integer n, return the nth term of the count-and-say sequence.
 
-
 // Example 1:
 
 // Input: n = 1
@@ -23,3 +22,31 @@
 // countAndSay(2) = say "1" = one 1 = "11"
 // countAndSay(3) = say "11" = two 1's = "21"
 // countAndSay(4) = say "21" = one 2 + one 1 = "12" + "11" = "1211"
+
+var countAndSay = function(n) {
+  if (n === 1) return '1';
+  let iterations = 1;
+  let result;
+
+  const sayInteger = (s) => {
+      if (iterations === n) {
+          result = s;
+          return;
+      }
+      let saidInt = '';
+      let count = 1;
+      for (let i = 0; i < s.length; i++) {
+          if (s[i + 1] !== s[i]) {
+              saidInt += count + s[i];
+              count = 1;
+          } else {
+              count++;
+          }
+      }
+      iterations++;
+      sayInteger(saidInt);
+  }
+  sayInteger('1');
+  return result;
+};
+
