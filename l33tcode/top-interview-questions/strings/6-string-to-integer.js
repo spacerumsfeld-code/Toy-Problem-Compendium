@@ -37,3 +37,8 @@ var myAtoi = function(s) {
   else if (integer < lowerBound) return lowerBound;
   else return upperBound;
 };
+
+// Performance
+// Runtime: 104 ms, faster than 55% of JavaScript online submissions for String to Integer.
+
+// Memory Usage: 39.9 MB, less than 96% of JavaScript online submissions for String to Integer.
