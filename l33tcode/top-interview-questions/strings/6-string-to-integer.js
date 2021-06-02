@@ -26,3 +26,14 @@
 //            ^
 // The parsed integer is 42.
 // Since 42 is in the range [-231, 231 - 1], the final result is 42.
+
+var myAtoi = function(s) {
+  let integer = parseInt(s);
+  let lowerBound = -(2 ** 31);
+  let upperBound = (2 ** 31) - 1;
+
+  if (isNaN(integer)) return 0;
+  else if (lowerBound <= integer && integer <= upperBound) return integer;
+  else if (integer < lowerBound) return lowerBound;
+  else return upperBound;
+};
