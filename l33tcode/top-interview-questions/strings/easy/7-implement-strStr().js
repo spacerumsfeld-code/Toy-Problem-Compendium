@@ -16,3 +16,17 @@
 
 // Input: haystack = "aaaaa", needle = "bba"
 // Output: -1
+
+var strStr = function(haystack, needle) {
+  if (!needle.length) return 0;
+  let p2 = 0;
+  for (let i = 0; i < haystack.length; i++) {
+      if (haystack[i] === needle[p2]) p2++;
+      else {
+          i -= p2;
+          p2 = 0;
+      }
+      if (p2 === needle.length) return i - (p2 - 1);
+  }
+  return -1;
+};
