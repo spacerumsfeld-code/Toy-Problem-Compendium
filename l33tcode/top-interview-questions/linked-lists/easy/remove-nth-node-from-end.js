@@ -40,3 +40,8 @@ var removeNthFromEnd = function(head, n) {
   return head
 };
 
+// Performance
+// Runtime: 84 ms, faster than 71% of JavaScript online submissions for Remove Nth Node From End of List.
+
+// Memory Usage: 40.4 MB, less than 33% of JavaScript online submissions for Remove Nth Node From End of List.
+
