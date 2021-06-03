@@ -19,3 +19,12 @@
 // -5000 <= Node.val <= 5000
 
 // Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
+
+const reverseList = (head) => {
+  let [prev, current] = [null, head];
+
+  while (current) {
+    [current.next, prev, current] = [prev, current, current.next];
+  }
+    return prev;
+};
