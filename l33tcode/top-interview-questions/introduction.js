@@ -12,7 +12,7 @@ skills.
 
 The problems are delimited by difficulty level. Here are the problems, in order:
 
-"Easy" Arrays
+"Easy" Array Problems
 1. Remove Duplicates from Sorted Array
 2. Best Time to Buy and Sell Stock II
 3. Rotate Array
@@ -25,7 +25,7 @@ The problems are delimited by difficulty level. Here are the problems, in order:
 10. Valid Sudoku
 11. Rotate Image
 
-"Easy" Strings
+"Easy" String Problems
 1. Reverse String
 2. Reverse Integer
 3. First Unique Char in String
@@ -35,6 +35,16 @@ The problems are delimited by difficulty level. Here are the problems, in order:
 7. Implement strStr()
 8. Count and Say
 9. Longest Common Prefix
+
+"Easy" Linked List Problems
+1.
+
+"Easy" Tree Problems
+1.
+
+"Easy" Searching and Sorting Problems
+1. Merge Sorted Array
+2. First Bad Version
 
 Medium
 (later)
