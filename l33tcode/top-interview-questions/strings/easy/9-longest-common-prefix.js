@@ -18,3 +18,23 @@
 // 1 <= strs.length <= 200
 // 0 <= strs[i].length <= 200
 // strs[i] consists of only lower-case English letters.
+
+function longestCommonPrefix (strs) {
+  if (!strs || strs.length === 0) {
+      return '';
+  }
+
+  const [smallest, largest] = strs.sort((a, b) => a.length - b.length);
+  console.log(large)
+  const matchesChar = (i, target) => strs.every(str => str[i] === target);
+  let lcp = '';
+
+  for (let i = 0; i < smallest.length; i++) {
+      if (matchesChar(i, smallest[i])) {
+          lcp += smallest[i];
+      } else {
+         break;
+      }
+  }
+  return lcp;
+};
