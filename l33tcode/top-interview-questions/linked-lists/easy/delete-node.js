@@ -37,3 +37,9 @@ var deleteNode = function(node) {
   node.next = node.next.next;
 };
 
+//note: I think my machine and/or internet is running slow today; there really isn't any better solution than this
+
+// Performance
+// Runtime: 140 ms, faster than ?? of JavaScript online submissions for Remove Node.
+
+// Memory Usage: 40.6 MB, less than 36% of JavaScript online submissions for Remove Node.
