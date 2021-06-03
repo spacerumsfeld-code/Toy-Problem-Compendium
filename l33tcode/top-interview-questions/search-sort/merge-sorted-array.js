@@ -32,3 +32,8 @@ const merge = (nums1, m, nums2, n) => {
     }
   }
 };
+
+// Performance
+// Runtime: 88 ms, faster than 16% of JavaScript online submissions for Merge Sorted Array.
+
+// Memory Usage: 38.5 MB, less than 68% of JavaScript online submissions for Merge Sorted Array.
