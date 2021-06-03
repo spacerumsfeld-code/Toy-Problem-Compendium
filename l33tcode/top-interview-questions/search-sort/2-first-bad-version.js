@@ -38,3 +38,8 @@ var solution = function(isBadVersion) {
       return lastBadV;
   };
 };
+
+// Performance
+// Runtime: 72 ms, faster than 87% of JavaScript online submissions for Merge Sorted Array.
+
+// Memory Usage: 37.6 MB, less than 98% of JavaScript online submissions for Merge Sorted Array.
