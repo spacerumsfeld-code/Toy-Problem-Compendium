@@ -2,7 +2,6 @@
 
 // Follow up: Could you do this in one pass?
 
-
 // Example 1:
 
 // Input: head = [1,2,3,4,5], n = 2
@@ -22,4 +21,22 @@
 // 1 <= sz <= 30
 // 0 <= Node.val <= 100
 // 1 <= n <= sz
+
+var removeNthFromEnd = function(head, n) {
+  let p = head;
+  let node = head;
+
+  while(n--){
+      p = p.next
+  }
+  while(p && p.next ) {
+      p = p.next
+      node = node.next
+  }
+
+  if(!p)  head = head.next
+  else node.next = node.next.next
+
+  return head
+};
 
