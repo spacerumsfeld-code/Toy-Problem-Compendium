@@ -38,3 +38,8 @@ function longestCommonPrefix (strs) {
   }
   return lcp;
 };
+
+// Performance
+// Runtime: 88 ms, faster than 55% of JavaScript online submissions for Longest Common Prefix.
+
+// Memory Usage: 39 MB, less than 78% of JavaScript online submissions for Longest Common Prefix.
