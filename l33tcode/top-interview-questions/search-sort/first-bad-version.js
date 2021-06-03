@@ -17,3 +17,24 @@
 
 // Input: n = 1, bad = 1
 // Output: 1
+
+var solution = function(isBadVersion) {
+
+  return function(n) {
+      let start = 1;
+      let end = n;
+      let mid = Math.floor((start + end) / 2);
+      let lastBadV = n;
+
+      while (start <= end) {
+          if (isBadVersion(mid)) {
+              lastBadV = mid;
+              end = mid - 1;
+          } else {
+              start = mid + 1;
+          }
+          mid = Math.floor((start + end) / 2);
+      }
+      return lastBadV;
+  };
+};
