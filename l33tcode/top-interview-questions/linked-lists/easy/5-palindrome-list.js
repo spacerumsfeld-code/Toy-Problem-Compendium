@@ -34,6 +34,6 @@ var isPalindrome = function(head) {
 };
 
 // Performance
-// Runtime: 200 ms, faster than 48% of JavaScript online submissions for Merge Two Sorted Lists.
+// Runtime: 200 ms, faster than 48% of JavaScript online submissions for Palindromne Lists.
 
-// Memory Usage: 67.5 MB, less than 24% of JavaScript online submissions for Merge Two Sorted Lists.
+// Memory Usage: 67.5 MB, less than 24% of JavaScript online submissions for Palindrome Lists.
