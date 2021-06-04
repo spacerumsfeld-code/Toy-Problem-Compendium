@@ -40,3 +40,7 @@ var hasCycle = function(head) {
   }
   return false;
 };
+
+/* Performance
+184 ms, faster than .... off the charts slow
+41.3 MB, better than 34%
