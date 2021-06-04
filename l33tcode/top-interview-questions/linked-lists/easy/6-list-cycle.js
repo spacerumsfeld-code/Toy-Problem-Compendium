@@ -44,3 +44,21 @@ var hasCycle = function(head) {
 /* Performance
 184 ms, faster than .... off the charts slow
 41.3 MB, better than 34%
+*/
+
+//extra memory solution 2 (swapped an array for a set, as set.has() is constant lookup vs array.includes linear time)
+var hasCycle = function(head) {
+  let nodes = new Set();
+  let current = head;
+
+  while (current) {
+    if (nodes.has(current)) return true;
+    nodes.add(current);
+    current = current.next;
+  }
+  return false;
+};
+
+/* Performance
+92ms, faster than 38%
+42.1MB, better than 12%
