@@ -24,6 +24,11 @@ var isPalindrome = function(head) {
       values.push(currentNode.val);
       currentNode = currentNode.next;
   }
+
   let reverseValues = values.slice().reverse();
-  return values.join('') === reverseValues.join('');
+
+  for (let i = 0; i < values.length; i++) {
+    if (values[i] !== reverseValues[i]) return false;
+  }
+  return true;
 };
