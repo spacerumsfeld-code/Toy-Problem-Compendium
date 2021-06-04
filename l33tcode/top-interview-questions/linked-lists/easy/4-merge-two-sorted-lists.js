@@ -18,3 +18,47 @@
 // The number of nodes in both lists is in the range [0, 50].
 // -100 <= Node.val <= 100
 // Both l1 and l2 are sorted in non-decreasing order.
+
+var mergeTwoLists = function(l1, l2) {
+  if (!l1 && !l2) return null;
+  if (!l1 && l2) return l2;
+  if (!l2 && l1) return l1;
+
+  let newListHead;
+  let newListCurrent;
+
+  if (l1.val <= l2.val) {
+      newListHead = l1;
+      newListCurrent = l1;
+      l1 = l1.next;
+  } else {
+      newListHead = l2;
+      newListCurrent = l2;
+      l2 = l2.next;
+  }
+
+  while (l1 && l2) {
+      if (l1.val <= l2.val) {
+          newListCurrent.next = l1;
+          newListCurrent = l1;
+          l1 = l1.next;
+      } else {
+          newListCurrent.next = l2;
+          newListCurrent = l2;
+          l2 = l2.next;
+      }
+  }
+
+  while (l1) {
+      newListCurrent.next = l1;
+      newListCurrent = l1;
+      l1 = l1.next;
+  }
+
+  while (l2) {
+      newListCurrent.next = l2;
+      newListCurrent = l2;
+      l2 = l2.next;
+  }
+  return newListHead;
+};
