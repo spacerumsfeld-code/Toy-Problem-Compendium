@@ -75,3 +75,7 @@ var hasCycle = function(head) {
     }
     return false;
 };
+
+/*Performance
+88 ms, faster than 66%
+40.5 MB, better than 97%
