@@ -62,3 +62,16 @@ var hasCycle = function(head) {
 /* Performance
 92ms, faster than 38%
 42.1MB, better than 12%
+
+Constant space solution */
+var hasCycle = function(head) {
+    let r1 = head, r2 = head;
+    while (r1 && r1.next) {
+        r1 = r1.next.next;
+        r2 = r2.next;
+        if (r1 == r2) {
+            return true;
+        }
+    }
+    return false;
+};
