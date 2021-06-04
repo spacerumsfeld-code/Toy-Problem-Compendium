@@ -62,3 +62,8 @@ var mergeTwoLists = function(l1, l2) {
   }
   return newListHead;
 };
+
+// Performance
+// Runtime: 84 ms, faster than 92% of JavaScript online submissions for Remove Nth Node From End of List.
+
+// Memory Usage: 40.5 MB, less than 29% of JavaScript online submissions for Remove Nth Node From End of List.
