@@ -12,7 +12,7 @@
 // Input: s = "aabb"
 // Output: -1
 
-var firstUniqChar = function(s) {
+var firstUniqChar = function(s: string): number {
   let dict = {};
   for (let char of s) {
       dict[char] = ++dict[char] || 1;

@@ -11,7 +11,7 @@
 // Input: nums = [0]
 // Output: [0]
 
-var moveZeroes = function(nums: number[]) {
+var moveZeroes = function(nums: number[]): void {
   let count = 0;
 
   for (let i = 0; i < nums.length; i++) {

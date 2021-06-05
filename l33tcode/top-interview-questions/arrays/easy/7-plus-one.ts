@@ -15,7 +15,7 @@
 // Output: [4,3,2,2]
 // Explanation: The array represents the integer 4321.
 
-var plusOne = function(digits: number[]) {
+var plusOne = function(digits: number[]): number[] {
   for (let i = digits.length - 1; i != -1; i--) {
       if (digits[i] != 9) {
           digits[i] += 1;
