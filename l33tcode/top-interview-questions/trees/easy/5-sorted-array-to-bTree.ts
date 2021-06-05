@@ -35,3 +35,7 @@ function sortedArrayToBST(nums: number[]): TreeNode | null {
   let end = nums.length - 1;
   return constructBST(nums, start, end);
 };
+
+/* Performance
+92 ms, faster than 80%
+41.7 MB, faster than 74% */
