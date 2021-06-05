@@ -23,10 +23,10 @@
 // countAndSay(3) = say "11" = two 1's = "21"
 // countAndSay(4) = say "21" = one 2 + one 1 = "12" + "11" = "1211"
 
-var countAndSay = function(n) {
+var countAndSay = function(n: number): string {
   if (n === 1) return '1';
   let iterations = 1;
-  let result;
+  let result: string;
 
   const sayInteger = (s) => {
       if (iterations === n) {
