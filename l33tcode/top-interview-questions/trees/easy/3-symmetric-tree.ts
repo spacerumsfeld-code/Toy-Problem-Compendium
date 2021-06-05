@@ -15,3 +15,24 @@
 // -100 <= Node.val <= 100
 
 // Follow up: Could you solve it both recursively and iteratively?
+
+function isSymmetric(root: TreeNode | null): boolean {
+  let isSymmetrical: boolean = true;
+
+  const checkNodes = (left: TreeNode, right: TreeNode): void => {
+    if (left && right) {
+      if (left.val !== right.val) {
+        isSymmetrical = false;
+        return;
+      }
+      checkNodes(left.left, right.right);
+      checkNodes(left.right, right.left);
+      } else if (left || right) {
+        isSymmetrical = false;
+        return;
+      }
+      return;
+  };
+  checkNodes(root.left, root.right);
+  return isSymmetrical;
+};
