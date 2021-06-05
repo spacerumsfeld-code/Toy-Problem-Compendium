@@ -15,12 +15,14 @@
 // Input: nums = [1]
 // Output: 1
 
-var singleNumber = function(nums) {
-  let res = nums[0], len = nums.length, i = 1
-  for(i; i< len; i++) {
-      res ^= nums[i]
+var singleNumber = function(nums: number[]): number {
+  let result = nums[0];
+  let length = nums.length;
+  let i = 1;
+  for(i; i< length; i++) {
+      result ^= nums[i]
   }
-  return res
+  return result
 };
 
 // Performance
