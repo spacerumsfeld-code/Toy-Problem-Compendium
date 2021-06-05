@@ -27,7 +27,7 @@
 // The parsed integer is 42.
 // Since 42 is in the range [-231, 231 - 1], the final result is 42.
 
-var myAtoi = function(s) {
+var myAtoi = function(s: string): number {
   let integer = parseInt(s);
   let lowerBound = -(2 ** 31);
   let upperBound = (2 ** 31) - 1;
