@@ -34,3 +34,7 @@ function maxDepth(root: TreeNode | null, depth: number = 0): number {
   if (!root) return depth;
   return Math.max(depth, maxDepth(root.left, depth + 1), maxDepth(root.right, depth + 1));
 };
+
+/* Performance
+84 ms, faster than 93%
+42.7 MB, faster than 51% */
