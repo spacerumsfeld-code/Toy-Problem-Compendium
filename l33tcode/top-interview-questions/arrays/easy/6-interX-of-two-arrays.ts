@@ -10,8 +10,8 @@
 // Output: [4,9]
 // Explanation: [9,4] is also accepted.
 
-var intersect = function(nums1, nums2) {
-  let result = [];
+var intersect = function(nums1: number[], nums2: number[]): number[] {
+  let result: number[] = [];
   let map = new Map();
   let smaller = nums1.length >= nums2.length ? nums2 : nums1;
   let larger = smaller === nums2 ? nums1 : nums2;
