@@ -22,22 +22,22 @@
 // 0 <= Node.val <= 100
 // 1 <= n <= sz
 
-var removeNthFromEnd = function(head, n) {
+var removeNthFromEnd = function(head: ListNode, n: number): ListNode {
   let p = head;
   let node = head;
 
   while(n--){
       p = p.next
   }
-  while(p && p.next ) {
+  while(p && p.next) {
       p = p.next
       node = node.next
   }
 
-  if(!p)  head = head.next
-  else node.next = node.next.next
+  if(!p)  head = head.next;
+  else node.next = node.next.next;
 
-  return head
+  return head;
 };
 
 // Performance
