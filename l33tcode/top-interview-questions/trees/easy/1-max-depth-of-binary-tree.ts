@@ -24,10 +24,15 @@
 // The number of nodes in the tree is in the range [0, 104].
 // -100 <= Node.val <= 100
 
-type TreeNode = {
-  val: number,
-  left: TreeNode | null,
+class TreeNode {
+  val: number
+  left: TreeNode | null
   right: TreeNode | null
+  constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+    this.val = (val===undefined ? 0 : val)
+    this.left = (left===undefined ? null : left)
+    this.right = (right===undefined ? null : right)
+  }
 }
 
 function maxDepth(root: TreeNode | null, depth: number = 0): number {

@@ -18,7 +18,7 @@
 
 // 1 <= nums.length <= 104
 // -104 <= nums[i] <= 104
-// nums is sorted in a strictly increasing order.
+// nums is sorted in a strictly increasing order
 
 function constructBST (nums: number[], start: number, end: number): TreeNode | null {
   if (start > end) return null;
