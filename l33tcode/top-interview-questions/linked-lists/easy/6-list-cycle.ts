@@ -29,9 +29,9 @@
 // Follow up: Can you solve it using O(1) (i.e. constant) memory?
 
 //extra memory solution 1
-var hasCycle = function(head) {
-  let nodes = [];
-  let current = head;
+var hasCycle1 = function(head: ListNode): boolean {
+  let nodes: ListNode[] = [];
+  let current: ListNode = head;
 
   while (current) {
     if (nodes.includes(current)) return true;
@@ -47,9 +47,9 @@ var hasCycle = function(head) {
 */
 
 //extra memory solution 2 (swapped an array for a set, as set.has() is constant lookup vs array.includes linear time)
-var hasCycle = function(head) {
-  let nodes = new Set();
-  let current = head;
+var hasCycle2 = function(head: ListNode): boolean {
+  let nodes: Set<ListNode> = new Set();
+  let current: ListNode = head;
 
   while (current) {
     if (nodes.has(current)) return true;
@@ -64,7 +64,7 @@ var hasCycle = function(head) {
 42.1MB, better than 12%
 
 Constant space solution */
-var hasCycle = function(head) {
+var hasCycle3 = function(head: ListNode): boolean {
     let r1 = head, r2 = head;
     while (r1 && r1.next) {
         r1 = r1.next.next;
@@ -79,3 +79,4 @@ var hasCycle = function(head) {
 /*Performance
 88 ms, faster than 66%
 40.5 MB, better than 97%
+*/
