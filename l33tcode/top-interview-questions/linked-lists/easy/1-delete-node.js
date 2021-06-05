@@ -32,7 +32,12 @@
 // The value of each node in the list is unique.
 // The node to be deleted is in the list and is not a tail node
 
-var deleteNode = function(node) {
+type Node = {
+  value,
+  next
+}
+
+var deleteNode = function(node: Node | null): void {
   node.val = node.next.val;
   node.next = node.next.next;
 };
