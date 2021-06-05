@@ -4,8 +4,8 @@
 
 // Note: You may not engage in multiple transactions simultaneously (i.e., you must sell the stock before you buy again).
 
-var maxProfit = function(prices) {
-  let maxProfit = 0;
+var maxProfit = function(prices: number[]): number {
+  let maxProfit: number = 0;
 
   for (let i = 1; i < prices.length; i++) {
       if (prices[i] > prices[i - 1]) maxProfit += prices[i] - prices[i - 1];
