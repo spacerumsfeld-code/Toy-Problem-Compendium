@@ -20,7 +20,7 @@
 
 // Follow up: A linked list can be reversed either iteratively or recursively. Could you implement both?
 
-const reverseList = (head) => {
+const reverseList = (head: ListNode): ListNode => {
   let [prev, current] = [null, head];
 
   while (current) {
