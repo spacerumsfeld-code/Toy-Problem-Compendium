@@ -17,15 +17,15 @@
 // Follow up: Could you do it in O(n) time and O(1) space?
 
 //naive solution
-var isPalindrome = function(head) {
-  let values = [];
-  let currentNode = head;
+var isPalindrome = function(head: ListNode): boolean {
+  let values: number[] = [];
+  let currentNode: ListNode = head;
   while (currentNode) {
       values.push(currentNode.val);
       currentNode = currentNode.next;
   }
 
-  let reverseValues = values.slice().reverse();
+  let reverseValues: number[] = values.slice().reverse();
 
   for (let i = 0; i < values.length; i++) {
     if (values[i] !== reverseValues[i]) return false;
