@@ -36,3 +36,7 @@ function isSymmetric(root: TreeNode | null): boolean {
   checkNodes(root.left, root.right);
   return isSymmetrical;
 };
+
+/* Performance
+88 ms, faster than 88%
+40.8 MB, faster than 42% */
