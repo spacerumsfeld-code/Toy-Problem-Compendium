@@ -32,10 +32,14 @@
 // The value of each node in the list is unique.
 // The node to be deleted is in the list and is not a tail node
 
-type ListNode = {
-  val: number,
-  next: ListNode
-}
+class ListNode {
+  val: number
+  next: ListNode | null
+    constructor(val?: number, next?: ListNode | null) {
+      this.val = (val===undefined ? 0 : val)
+      this.next = (next===undefined ? null : next)
+    }
+};
 
 var deleteNode = function(node: ListNode | null): void {
   node.val = node.next.val;
