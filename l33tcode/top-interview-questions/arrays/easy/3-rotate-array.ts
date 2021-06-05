@@ -9,8 +9,8 @@
 // rotate 2 steps to the right: [6,7,1,2,3,4,5]
 // rotate 3 steps to the right: [5,6,7,1,2,3,4]
 
-var rotate = function(nums, k) {
-  let pos = (k % nums.length)
+var rotate = function(nums: number[], k: number): void {
+  let pos = (k % nums.length);
   let n = nums.splice(nums.length - pos)
   nums.splice(0, 0, ...n)
   };

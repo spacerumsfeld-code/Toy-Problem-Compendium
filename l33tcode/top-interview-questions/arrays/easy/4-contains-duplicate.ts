@@ -9,7 +9,7 @@
 // Input: nums = [1,2,3,4]
 // Output: false
 
-var containsDuplicate = function(nums) {
+var containsDuplicate = function(nums: number[]): boolean {
   let cache = {};
   for (let num of nums) {
     if (cache[num]) return true;

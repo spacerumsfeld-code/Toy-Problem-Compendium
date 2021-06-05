@@ -4,8 +4,8 @@
 
 var removeDuplicates = function(nums: number[]): number {
   if (nums.length < 2) return nums.length;
-  let p1: number = 0;
-  let p2: number = 1;
+  let p1 = 0;
+  let p2 = 1;
 
   while (p1 < nums.length) {
       if (nums[p1] === nums[p2]) nums.splice(p2, 1);
