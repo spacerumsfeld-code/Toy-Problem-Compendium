@@ -20,6 +20,7 @@
 // ,[".",".",".",".","8",".",".","7","9"]]
 // Output: true
 
+
 //note: I did not develop this solution
 var isValidSudoku = function(board) {
   // create an empty set for each row/col/square
