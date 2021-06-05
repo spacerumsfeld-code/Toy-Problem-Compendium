@@ -16,7 +16,7 @@
 
 // Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
 
-var isAnagram = function(s, t) {
+var isAnagram = function(s: string, t: string): boolean {
   if (s.length !== t.length) return false;
   let map = new Map();
 
