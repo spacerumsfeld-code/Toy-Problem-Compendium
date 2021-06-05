@@ -18,7 +18,7 @@
 // Input: nums = [3,3], target = 6
 // Output: [0,1]
 
-var twoSum = function(nums, target) {
+var twoSum = function(nums: number[], target: number) {
   let map = new Map();
 
   for (let i = 0; i < nums.length; i++) {
