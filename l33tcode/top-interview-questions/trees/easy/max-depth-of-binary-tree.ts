@@ -24,3 +24,13 @@
 // The number of nodes in the tree is in the range [0, 104].
 // -100 <= Node.val <= 100
 
+type TreeNode = {
+  val: number,
+  left: TreeNode,
+  right: TreeNode
+}
+
+function maxDepth(root: TreeNode | null, depth: number = 0): number {
+  if (!root) return depth;
+  return Math.max(depth, maxDepth(root.left, depth + 1), maxDepth(root.right, depth + 1));
+};
