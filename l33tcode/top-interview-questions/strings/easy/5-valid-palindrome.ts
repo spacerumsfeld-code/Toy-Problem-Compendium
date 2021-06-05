@@ -11,7 +11,7 @@
 // Output: false
 // Explanation: "raceacar" is not a palindrome.
 
-var isPalindrome = function(s) {
+var isPalindrome = function(s: string): boolean {
   if (s.length === 1) return true;
   let alphanum = s.toLowerCase().replace(/[\W_]+/g, '');
 
