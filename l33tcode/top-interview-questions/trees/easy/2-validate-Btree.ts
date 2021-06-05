@@ -37,3 +37,7 @@ function isValidBST(root: TreeNode | null): boolean {
   }
   return true;
 };
+
+/* Performance
+92 ms, faster than 80%
+43.7 MB, faster than 72% */

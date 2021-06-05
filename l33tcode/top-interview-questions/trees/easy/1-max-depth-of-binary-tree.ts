@@ -26,8 +26,8 @@
 
 type TreeNode = {
   val: number,
-  left: TreeNode,
-  right: TreeNode
+  left: TreeNode | null,
+  right: TreeNode | null
 }
 
 function maxDepth(root: TreeNode | null, depth: number = 0): number {
