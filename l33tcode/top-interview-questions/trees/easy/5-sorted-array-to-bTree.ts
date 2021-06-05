@@ -19,3 +19,19 @@
 // 1 <= nums.length <= 104
 // -104 <= nums[i] <= 104
 // nums is sorted in a strictly increasing order.
+
+function constructBST (nums: number[], start: number, end: number): TreeNode | null {
+  if (start > end) return null;
+  let mid = Math.floor((start + end) / 2);
+  let root = new TreeNode(nums[mid]);
+
+  root.left = constructBST(nums, start, mid - 1);
+  root.right = constructBST(nums, mid + 1, end);
+  return root;
+}
+
+function sortedArrayToBST(nums: number[]): TreeNode | null {
+  let start = 0;
+  let end = nums.length - 1;
+  return constructBST(nums, start, end);
+};
