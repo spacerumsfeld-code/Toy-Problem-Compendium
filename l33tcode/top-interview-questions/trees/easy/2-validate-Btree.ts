@@ -20,3 +20,20 @@
 
 // The number of nodes in the tree is in the range [1, 104].
 // -231 <= Node.val <= 231 - 1
+
+function isValidBST(root: TreeNode | null): boolean {
+  const values: number[] = [];
+  let node: TreeNode = root;
+
+  const traverse = (node: TreeNode): void => {
+    if (node.left) traverse(node.left);
+    values.push(node.val);
+    if (node.right) traverse(node.right);
+  }
+  traverse(node);
+
+  for (let i = 0; i < values.length; i++) {
+    if (values[i - 1] >= values[i]) return false;
+  }
+  return true;
+};
