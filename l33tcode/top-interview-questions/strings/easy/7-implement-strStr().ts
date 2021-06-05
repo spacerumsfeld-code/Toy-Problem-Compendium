@@ -17,7 +17,7 @@
 // Input: haystack = "aaaaa", needle = "bba"
 // Output: -1
 
-var strStr = function(haystack, needle) {
+var strStr = function(haystack: number[], needle: number[]): number {
   if (!needle.length) return 0;
   let p2 = 0;
   for (let i = 0; i < haystack.length; i++) {
