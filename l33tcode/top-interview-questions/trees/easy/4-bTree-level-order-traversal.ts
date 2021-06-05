@@ -31,3 +31,7 @@ function levelOrder(root: TreeNode | null): number[][] {
   traverse(root, 0);
   return result;
 };
+
+/* Performance
+88 ms, faster than 67%
+40.4 MB, faster than 85% */
