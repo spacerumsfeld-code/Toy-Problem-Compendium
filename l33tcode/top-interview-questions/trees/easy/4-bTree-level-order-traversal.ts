@@ -18,12 +18,6 @@
 // The number of nodes in the tree is in the range [0, 2000].
 // -1000 <= Node.val <= 1000
 
-type TreeNode = {
-  val: number,
-  left: TreeNode | null,
-  right: TreeNode | null
-}
-
 function levelOrder(root: TreeNode | null): number[][] {
   const result: number[][] = [];
 
