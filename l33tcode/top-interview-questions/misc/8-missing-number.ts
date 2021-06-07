@@ -28,3 +28,20 @@
 // 1 <= n <= 104
 // 0 <= nums[i] <= n
 // All the numbers of nums are unique.
+
+function missingNumber(nums: number[]): number {
+  let set: Set<any> = new Set();
+
+  for (let num of nums) {
+    set.add(num);
+  }
+
+  for (let i = 0; i <= nums.length; i++) {
+    if (!set.has(i)) return i;
+  }
+};
+
+/* Performance
+112 ms, faster than 28%
+47.6 MB, not so good
+*/
