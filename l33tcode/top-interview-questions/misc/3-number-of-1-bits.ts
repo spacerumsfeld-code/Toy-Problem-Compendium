@@ -29,3 +29,7 @@ function hammingWeight(n: number): number {
   let numToStrArr: string[] = [...n.toString(2)];
   return numToStrArr.filter(el => el === '1').length;
 };
+
+//Performance
+//72 ms, Faster than 100%
+//40.7 MB, better than 36%
