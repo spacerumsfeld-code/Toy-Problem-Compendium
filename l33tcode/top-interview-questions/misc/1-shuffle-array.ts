@@ -58,3 +58,7 @@ class Solution {
  * var param_1 = obj.reset()
  * var param_2 = obj.shuffle()
  */
+
+// Performance
+// Runtime: 256 ms, faster than 23%
+// Memory Usage: 41.1 MB, less than 50%.
