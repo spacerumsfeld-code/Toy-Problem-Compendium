@@ -24,3 +24,8 @@
 // The input must be a binary string of length 32.
 
 // Follow up: If this function is called many times, how would you optimize it?
+
+function hammingWeight(n: number): number {
+  let numToStrArr: string[] = [...n.toString(2)];
+  return numToStrArr.filter(el => el === '1').length;
+};
