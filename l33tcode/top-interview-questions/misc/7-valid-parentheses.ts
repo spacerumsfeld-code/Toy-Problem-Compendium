@@ -42,3 +42,7 @@ function isValid(s: string): boolean {
 
   return !stack.length;
 };
+
+/* Performance
+88 ms, faster than 56%,
+40.6 MB, better than 36% */
