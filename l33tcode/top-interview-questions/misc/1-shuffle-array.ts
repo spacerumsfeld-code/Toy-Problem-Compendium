@@ -26,3 +26,35 @@
 // -106 <= nums[i] <= 106
 // All the elements of nums are unique.
 // At most 5 * 104 calls will be made to reset and shuffle
+class Solution {
+  nums: number[];
+  original: number[];
+
+    constructor(nums: number[]) {
+      this.nums = [...nums];
+      this.original = nums;
+    }
+
+    reset(): number[] {
+      return this.original;
+    }
+
+    shuffle(): number[] {
+      for (let i = 0; i < this.nums.length; i++) {
+        let randIdx = Math.floor(Math.random() * this.nums.length);
+        this.swap(i, randIdx);
+      }
+      return this.nums;
+    }
+
+    swap (idx1, idx2) {
+      [this.nums[idx1], this.nums[idx2]] = [this.nums[idx2], this.nums[idx1]];
+    }
+}
+
+/**
+ * Your Solution object will be instantiated and called as such:
+ * var obj = new Solution(nums)
+ * var param_1 = obj.reset()
+ * var param_2 = obj.shuffle()
+ */
