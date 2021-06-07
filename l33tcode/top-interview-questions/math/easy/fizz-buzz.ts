@@ -20,3 +20,15 @@
 
 // Constraints:
 // 1 <= n <= 104
+
+function fizzBuzz(n: number): string[] {
+  let result: string[] = [];
+  for (let i = 1; i <= n; i++) {
+    let pushStr: string = '';
+    if (i % 3 === 0) pushStr += 'Fizz';
+    if (i % 5 === 0) pushStr += 'Buzz';
+    if (!pushStr.length) pushStr += i;
+    result.push(pushStr);
+  }
+  return result;
+};
