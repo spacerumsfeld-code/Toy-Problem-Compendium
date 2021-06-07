@@ -46,6 +46,12 @@ The problems are delimited by difficulty level. Here are the problems, in order:
 1. Merge Sorted Array
 2. First Bad Version
 
+"Easy" Math Problems
+1. FizzBuzz
+2. Count Primes
+3. Power of Three
+4. Roman to Integer
+
 Medium
 (later)
 
