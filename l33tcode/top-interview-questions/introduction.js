@@ -52,6 +52,9 @@ The problems are delimited by difficulty level. Here are the problems, in order:
 3. Power of Three
 4. Roman to Integer
 
+"Easy" Miscellanous Problems
+
+
 Medium
 (later)
 

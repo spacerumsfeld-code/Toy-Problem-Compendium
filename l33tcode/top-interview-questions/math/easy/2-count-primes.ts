@@ -33,4 +33,3 @@ var countPrimes = function(n) {
 
   return count;
 };
-
