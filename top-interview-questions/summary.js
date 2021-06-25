@@ -47,7 +47,11 @@ The problems are delimited by difficulty level. Here are the problems, in order:
 6. List Cycle
 
 "Easy" Tree Problems
-1.
+1. Max Depth of Binary Tree
+2. Validate Binary Tree
+3. Symmetric Tree
+4. Binary Tree Level Order Traversal
+5. Sorted Array to Binary Tree
 
 "Easy" Searching and Sorting Problems
 1. Merge Sorted Array
