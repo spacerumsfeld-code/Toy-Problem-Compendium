@@ -1,8 +1,7 @@
 /* Welcome to the Arrays section of the "Top Interview Questions" module of l33tcode.
 These problems will all pertain to, you guessed it, arrays.
 
-The point of these exercises is not to simply whip up a solution as fast as possible;
-take as much time as needed during the brainstorming segment of your problem-solving process
+Take as much time as needed during the brainstorming segment of your problem-solving process
 and try to really get into the weeds of what your code is telling the machine to do, including
 the time and space complexity of said code.
 
@@ -40,10 +39,19 @@ The problems are delimited by difficulty level. Here are the problems, in order:
 9. Longest Common Prefix
 
 "Easy" Linked List Problems
-1.
+1. Delete Node
+2. Remove nth Node from End
+3. Reverse Linked List
+4. Merge Two Sorted Lists
+5. Palindrome List
+6. List Cycle
 
 "Easy" Tree Problems
-1.
+1. Max Depth of Binary Tree
+2. Validate Binary Tree
+3. Symmetric Tree
+4. Binary Tree Level Order Traversal
+5. Sorted Array to Binary Tree
 
 "Easy" Searching and Sorting Problems
 1. Merge Sorted Array
