@@ -10,6 +10,9 @@ The overarching goal is a deeper-seated understanding of the implications of dif
 instructions to a machine (i.e., code), as well as, of course, sharpening one's interview
 skills.
 
+Note: problems in the easy section marked with an asterisk are bitwise operation problems;
+I may research that a bit more then try to solve them, or I may proceed onward and save them for later
+
 The problems are delimited by difficulty level. Here are the problems, in order:
 
 "Easy" Array Problems
@@ -53,6 +56,14 @@ The problems are delimited by difficulty level. Here are the problems, in order:
 4. Roman to Integer
 
 "Easy" Miscellanous Problems
+
+
+
+
+
+
+
+
 
 
 Medium
