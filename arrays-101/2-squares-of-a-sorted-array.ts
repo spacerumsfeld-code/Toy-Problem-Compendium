@@ -29,3 +29,8 @@ var sortedSquares = function(nums: number[]) {
 108ms, faster than 95%
 45.7MB, better than 30%
 */
+
+/* Notes
+-Look at other solutions; why is my solution only 30% better even though I modify input array in place,
+thus not having to use extra memory unlike a map or creation of result array?
+*/
