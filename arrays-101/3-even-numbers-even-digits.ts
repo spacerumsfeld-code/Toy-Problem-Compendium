@@ -24,3 +24,34 @@ Constraints:
 1 <= nums.length <= 500
 1 <= nums[i] <= 10^5
 */
+
+/*
+task: given an array of integers, return the amount of integers with an even number of digits
+
+I: array of integers
+O: integer
+C: array length = 1-500; arr[i] = 1 - 100_000
+E: only one integer in array.
+
+simple
+  initialize count variable
+  iterate over array
+    if integer as string length even, increment count
+  return count
+
+ES6 "fancy" single line
+  filter array, callback checks even length of string verrsion of integer
+  return length of this operation
+
+optimized?
+  */
+
+var findNumbers = function(nums) {
+  let count = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i].toString().length % 2 === 0) count++;
+  }
+
+  return count;
+};
