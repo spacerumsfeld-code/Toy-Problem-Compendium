@@ -46,7 +46,7 @@ ES6 "fancy" single line
 optimized?
   */
 
-var findNumbers = function(nums) {
+var findNumbers = function(nums: number[]) {
   let count = 0;
 
   for (let i = 0; i < nums.length; i++) {
@@ -60,3 +60,9 @@ var findNumbers = function(nums) {
 76ms, faster than 76%
 40.5MB, better than 25%
 */
+
+/* Notes
+seeing variance in submitted solutions' memory consumption; I am beginning to think
+this is a Leetcode server issue more than anything. From now on I will not hassle
+specific memory consumption TOO much, as it's clear there is a lot of variance for
+the exact same solutions on submission */
