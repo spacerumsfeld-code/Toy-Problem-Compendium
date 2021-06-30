@@ -27,3 +27,8 @@ sliding window pattern
 
       return max;
     };
+
+    /* Performance Eval
+    88ms, faster than ~79%
+    42MB, better than 41%
+    */
