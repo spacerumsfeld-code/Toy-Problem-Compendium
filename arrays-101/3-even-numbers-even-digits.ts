@@ -55,3 +55,8 @@ var findNumbers = function(nums) {
 
   return count;
 };
+
+/* Performance Eval
+76ms, faster than 76%
+40.5MB, better than 25%
+*/
