@@ -38,3 +38,13 @@
 
 // Follow up: Can you come up with an algorithm that runs in O(m + n) time?
 
+const merge = (nums1, m, nums2, n) => {
+  if (n === 0) return;
+  nums1.length = nums1.length - n;
+
+  for (let i = 0; i < nums2.length; i++) {
+    nums1.push(nums2[i]);
+  }
+
+  nums1.sort((a, b) => a - b);
+}
