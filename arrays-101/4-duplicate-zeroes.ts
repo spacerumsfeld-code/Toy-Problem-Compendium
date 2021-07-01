@@ -45,3 +45,8 @@ var duplicateZeros = function(arr) {
   }
   arr.length = length;
 };
+
+/* Performance Eval
+88ms faster than 78%,
+40.5MB, better than 38%
+*/
