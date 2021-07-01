@@ -56,7 +56,7 @@ var duplicateZeroesImprovement = function(arr) {
   for (let j = 0; j < arr.length; j++) {
     if (arr[j] === 0) {
       arr.pop();
-      arr.splice(i,0,0);
+      arr.splice(j,0,0);
     }
   }
 }
