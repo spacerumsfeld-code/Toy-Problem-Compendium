@@ -18,3 +18,30 @@
 // Note:
 // 1 <= arr.length <= 10000
 // 0 <= arr[i] <= 9
+
+/*
+task: given an array of integers, modify the array in-place such that wherever a zero occurs, the element after it is a zero as well. Preserve the original length of the array (so, some elements will be left off).
+
+I: array of integers
+O: none
+C: arr[i] = 0-9, arr.length = 1 - 10_000
+E: no zeroes in array. array will remain unmodified. array of 1 zero.
+
+simple
+  iterate over array
+  when zero detected, splice new zero into its spot
+  cut array down to original length
+
+better
+  */
+
+var duplicateZeros = function(arr) {
+  let length = arr.length;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 0) {
+      arr.splice(i, 0, 0);
+      i++;
+    }
+  }
+  arr.length = length;
+};
