@@ -48,3 +48,8 @@ const merge = (nums1, m, nums2, n) => {
 
   nums1.sort((a, b) => a - b);
 }
+
+/* Performance Eval
+72ms, faster than ~88%
+39MB, better than ~24%
+*/
