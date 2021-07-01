@@ -60,3 +60,8 @@ var duplicateZeroesImprovement = function(arr) {
     }
   }
 }
+
+/* Explanation
+This solution is likely more performant because it pops off an element when a zero is detected, and it does this FIRST. The popping saves loops because we do not continue iterating over the original array values; we only go as far as the original length of the array. Additionally, popping before splicing means less needs to get reindexed once a zero is inserted.
+*/
+
