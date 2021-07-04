@@ -54,3 +54,10 @@ var removeElement = function(nums, val) {
   }
   return nums.length;
 };
+
+/* Performance eval
+72ms, faster than 89%
+38.6MB, better than 72%
+*/
+
+
