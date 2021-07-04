@@ -40,3 +40,16 @@
 // -100 <= nums[i] <= 100
 // nums is sorted in non-decreasing order.
 
+var removeDuplicates = function(nums) {
+  if (!nums.length) return 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === nums[i + 1]) {
+      nums.splice(i, 1);
+      i--;
+    }
+  }
+
+  return nums.length;
+
+};
