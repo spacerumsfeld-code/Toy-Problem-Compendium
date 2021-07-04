@@ -53,3 +53,8 @@ var removeDuplicates = function(nums) {
   return nums.length;
 
 };
+
+/* Performance eval
+280ms, better than ~5%
+41.8MB, better than ~15%
+*/
