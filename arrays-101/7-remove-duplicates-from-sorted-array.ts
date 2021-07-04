@@ -58,3 +58,9 @@ var removeDuplicates = function(nums) {
 280ms, better than ~5%
 41.8MB, better than ~15%
 */
+
+/* Notes
+While this is a suboptimal solution to be sure, I or the leetcode servers are experiencing issues.
+I submitted a 60ms solution (as seen on the distribution graph of solutions) and it still came back as
+better than a mere 10% of solutions. I am suspending work for the night as it is obnoxious to have
+server or local issues completely obscuring the actual relative performance of my code
