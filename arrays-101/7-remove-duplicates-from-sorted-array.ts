@@ -40,7 +40,7 @@
 // -100 <= nums[i] <= 100
 // nums is sorted in non-decreasing order.
 
-var removeDuplicates = function(nums) {
+var removeDuplicates = function(nums: number[]) {
   if (!nums.length) return 0;
 
   for (let i = 0; i < nums.length; i++) {
@@ -63,4 +63,4 @@ var removeDuplicates = function(nums) {
 While this is a suboptimal solution to be sure, I or the leetcode servers are experiencing issues.
 I submitted a 60ms solution (as seen on the distribution graph of solutions) and it still came back as
 better than a mere 10% of solutions. I am suspending work for the night as it is obnoxious to have
-server or local issues completely obscuring the actual relative performance of my code
+server or local issues completely obscuring the actual relative performance of my code */
