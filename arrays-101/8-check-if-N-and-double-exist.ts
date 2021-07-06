@@ -24,3 +24,16 @@
 // Constraints:
 // 2 <= arr.length <= 500
 // -10^3 <= arr[i] <= 10^3
+
+var checkIfExist = function(arr: number[]): boolean {
+  let cache = {};
+
+  for (let i = 0; i < arr.length; i++) {
+    if (cache[arr[i] * 2]) return true;
+    else if (arr[i] % 2 === 0) {
+      if (cache[arr[i] / 2]) return true;
+    }
+    cache[arr[i]] = true;
+  }
+  return false;
+};
