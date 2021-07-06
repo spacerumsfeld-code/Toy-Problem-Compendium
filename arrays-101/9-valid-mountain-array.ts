@@ -39,3 +39,8 @@ var validMountainArray = function(arr) {
     }
   }
 };
+
+/* Performance eval:
+80ms, faster than 80%,
+41.9MB, better than ~33%
+*/
