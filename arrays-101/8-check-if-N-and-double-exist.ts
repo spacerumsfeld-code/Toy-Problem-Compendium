@@ -37,3 +37,8 @@ var checkIfExist = function(arr: number[]): boolean {
   }
   return false;
 };
+
+/* Performance Eval:
+76ms, better than 84%
+40.7MB, better than ~22%
+*/
