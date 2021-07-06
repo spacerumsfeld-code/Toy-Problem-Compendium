@@ -23,3 +23,19 @@
 // Constraints:
 // 1 <= arr.length <= 104
 // 0 <= arr[i] <= 104
+
+var validMountainArray = function(arr) {
+  if (arr.length < 3) return false;
+  let peekFound = false;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (i === arr.length - 1) {
+      if (!peekFound) return false;
+      else return true;
+    }
+    if (!(arr[i + 1] > arr[i])) peekFound = true;
+    if (peekFound) {
+      if (!(arr[i + 1] < arr[i]) || i === 0) return false;
+    }
+  }
+};
