@@ -14,3 +14,18 @@
 // 1 <= nums[i] <= n
 
 // Follow up: Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.
+
+var findDisappearedNumbers = function(nums) {
+  let cache = {};
+  let result = [];
+
+  for (let i = 0; i < nums.length; i++) {
+    cache[nums[i]] = true;
+  }
+
+  for (let j = 1; j <= nums.length; j++) {
+    if (!cache[j]) result.push(j);
+  }
+
+  return result;
+};
