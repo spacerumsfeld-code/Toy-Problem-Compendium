@@ -53,3 +53,8 @@ linear?
   let sorted = duplicateFree.sort((a, b) => b - a);
   return sorted.length < 3 ? sorted[0] : sorted[2];
 };
+
+/* Performance eval:
+76ms, faster than 85%,
+40.5MB, better than ~54%
+*/
