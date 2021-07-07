@@ -25,3 +25,8 @@ var sortArrayByParity = function(nums) {
   }
   return nums;
 };
+
+/* Performance eval:
+92ms, faster than ~81%,
+41MB, faster than ~58%
+*/
