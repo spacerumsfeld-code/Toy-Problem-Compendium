@@ -21,3 +21,35 @@
 // -231 <= nums[i] <= 231 - 1
 
 // Follow up: Can you find an O(n) solution?
+
+/**
+ * @param {number[]} nums
+ * @return {number}
+
+ task; given number[], return the third largest value. This value should be unique (not a duplicate of second largest, for example)
+
+ I: number[]
+ O: number
+ C: nums.length = 1 - 10_000, nums[i] = -2**31 - 2**31 - 1
+ E: only one num. Just return nums[0], only two nums, normal procedure should suffice
+
+ simple:
+   find Max of array
+   splice out max, keep value in variable
+   repeat 3 times
+   return max
+(loglinear, tons of extra memory with splicing and reindexing that results)
+
+better:
+ convert array to set to remove duplicates, back to array duplicate-free
+ sort descending, if length less than 3 return max, if not return arr[2]
+
+linear?
+ ??
+ */
+
+ var thirdMax = function(nums) {
+  let duplicateFree = [...new Set(nums)];
+  let sorted = duplicateFree.sort((a, b) => b - a);
+  return sorted.length < 3 ? sorted[0] : sorted[2];
+};
