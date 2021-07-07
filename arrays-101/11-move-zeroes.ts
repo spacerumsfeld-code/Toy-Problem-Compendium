@@ -16,3 +16,17 @@
 // -231 <= nums[i] <= 231 - 1
 
 // Follow up: Could you minimize the total number of operations done?
+
+function moveZeroes(nums) {
+  if (nums.length < 2) return;
+  let write = 0;
+  for (let read = 0; read < nums.length; read++) {
+    if (nums[read] !== 0) {
+      nums[write] = nums[read];
+      if (read !== write) {
+        nums[read] = 0;
+      }
+      write++
+    }
+  }
+}
