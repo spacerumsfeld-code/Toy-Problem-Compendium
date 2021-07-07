@@ -44,3 +44,8 @@ var heightChecker = function(heights: number[]): number {
 
   return count;
 };
+
+/* Performance eval:
+72ms, faster than 89%,
+38.8MB, better than ~39%
+*/
