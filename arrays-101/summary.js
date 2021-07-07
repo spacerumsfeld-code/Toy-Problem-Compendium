@@ -2,6 +2,10 @@
 note: there may be some overlap with other collections, but that is okay.
 It's another rep and a chance to understand the problem more deeply.
 
+Array Basic Principles
+This section will outline basic complexities of array operations and helpful tips
+
+
 Problems
 
 Introduction
@@ -31,3 +35,4 @@ Extra problems
 14. Third Maximum Number
 15. Max Consecutive Ones II
 16. Find All Numbers Disappeared
+

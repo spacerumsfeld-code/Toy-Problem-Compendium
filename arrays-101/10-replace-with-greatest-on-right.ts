@@ -21,3 +21,15 @@
 // Constraints:
 // 1 <= arr.length <= 104
 // 1 <= arr[i] <= 105
+
+var replaceElements = function(arr) {
+  let max = arr[arr.length - 1];
+
+  for (let i = arr.length - 1; i >= 0; i--) {
+    let curr = arr[i];
+    arr[i] = max;
+    max = curr > max ? curr : max;
+  }
+  arr[arr.length - 1] = -1;
+  return arr;
+};
