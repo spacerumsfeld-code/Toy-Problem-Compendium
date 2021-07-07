@@ -33,3 +33,8 @@ var replaceElements = function(arr) {
   arr[arr.length - 1] = -1;
   return arr;
 };
+
+/* Performance Eval:
+96ms, faster than ~79%,
+42.3MB, better than ~59%
+*/
