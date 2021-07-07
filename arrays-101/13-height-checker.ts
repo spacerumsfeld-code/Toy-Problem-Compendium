@@ -32,3 +32,15 @@
 // Constraints:
 // 1 <= heights.length <= 100
 // 1 <= heights[i] <= 100
+
+var heightChecker = function(heights: number[]): number {
+  if (heights.length < 2) return 0;
+  let sorted = heights.slice(0).sort((a, b) => a - b);
+  let count = 0;
+
+  for (let i = 0; i < sorted.length; i++) {
+    if (sorted[i] !== heights[i]) count++;
+  }
+
+  return count;
+};
