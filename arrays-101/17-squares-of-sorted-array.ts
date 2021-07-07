@@ -23,3 +23,8 @@ var sortedSquares = function(nums) {
 
   return nums.sort((a, b) => a - b);
 };
+
+/* Performance eval:
+112ms, faster than ~87%,
+49.7MB, better than ~30%
+*/
