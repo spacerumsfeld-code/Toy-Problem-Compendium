@@ -13,3 +13,13 @@
 // 1 <= nums.length <= 104
 // -104 <= nums[i] <= 104
 // nums is sorted in non-decreasing order.
+
+var sortedSquares = function(nums) {
+  if (nums.length === 1) return [nums[0] ** 2];
+
+  for (let i = 0; i < nums.length; i++) {
+    nums[i] = nums[i] ** 2;
+  }
+
+  return nums.sort((a, b) => a - b);
+};
