@@ -38,3 +38,8 @@ var findMaxConsecutiveOnes = function(nums) {
 
   return maxStreak;
 };
+
+/* Performance eval:
+84ms, faster than ~81%,
+41.1MB, better than ~83%
+*/
