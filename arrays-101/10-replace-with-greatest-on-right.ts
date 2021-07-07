@@ -22,7 +22,7 @@
 // 1 <= arr.length <= 104
 // 1 <= arr[i] <= 105
 
-var replaceElements = function(arr) {
+var replaceElements = function(arr: number[]): number[] {
   let max = arr[arr.length - 1];
 
   for (let i = arr.length - 1; i >= 0; i--) {

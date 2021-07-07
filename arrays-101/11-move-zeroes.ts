@@ -17,7 +17,7 @@
 
 // Follow up: Could you minimize the total number of operations done?
 
-function moveZeroes(nums) {
+function moveZeroes(nums: number[]): void {
   if (nums.length < 2) return;
   let write = 0;
   for (let read = 0; read < nums.length; read++) {
@@ -30,3 +30,8 @@ function moveZeroes(nums) {
     }
   }
 }
+
+/* Performance eval:
+80ms, faster than ~86%,
+40.2MB, faster than ~68%
+*/
