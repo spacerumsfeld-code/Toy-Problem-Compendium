@@ -50,7 +50,7 @@ linear?
 
  var thirdMax = function(nums) {
   let duplicateFree = [...new Set(nums)];
-  let sorted = duplicateFree.sort((a, b) => b - a);
+  let sorted = duplicateFree.sort((a: any, b: any) => b - a);
   return sorted.length < 3 ? sorted[0] : sorted[2];
 };
 
