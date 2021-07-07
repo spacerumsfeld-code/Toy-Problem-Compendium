@@ -11,3 +11,17 @@
 // Note:
 // 1 <= nums.length <= 5000
 // 0 <= nums[i] <= 5000
+
+var sortArrayByParity = function(nums) {
+  if (nums.length < 2) return nums;
+  let write = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] % 2 === 0 && nums[write] % 2 !== 0) {
+      [nums[i], nums[write]] = [nums[write], nums[i]];
+      write++;
+    } else if (nums[write] % 2 === 0) write++;
+
+  }
+  return nums;
+};
