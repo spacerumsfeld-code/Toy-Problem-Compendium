@@ -5,7 +5,6 @@ It's another rep and a chance to understand the problem more deeply.
 Array Basic Principles
 This section will outline basic complexities of array operations and helpful tips
 
-
 Problems
 
 Introduction
