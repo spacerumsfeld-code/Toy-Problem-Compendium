@@ -58,3 +58,11 @@ class MyHashSet {
 284ms, faster than ~42%,
 46.5MB, better than ~77%
 */
+
+/* Note:
+This problem is at the beginning of the collection and is an EASY problem. Obviously,
+the solution is nowhere near optimal. But I believe the problem is conveying the basics
+of what is supposed to happen under the hood; otherwise, it would be a MEDIUM or HARD
+problem. Therefore, though not optimal, the solution is sufficient for the specified effort
+expected (as indicated by the problem being marked EASY).
+*/
