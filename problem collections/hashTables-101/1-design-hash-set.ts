@@ -53,3 +53,8 @@ class MyHashSet {
     return false;
   }
 };
+
+/* Performance eval:
+284ms, faster than ~42%,
+46.5MB, better than ~77%
+*/
