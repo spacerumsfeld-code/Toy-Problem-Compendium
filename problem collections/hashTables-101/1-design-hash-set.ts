@@ -28,3 +28,28 @@
 // Constraints:
 // 0 <= key <= 106
 // At most 104 calls will be made to add, remove, and contains.
+
+class MyHashSet {
+  constructor () {
+    this.set = [];
+  }
+
+  add (key) {
+    if (this.set.includes(key)) return;
+    this.set.push(key);
+  }
+
+  remove (key) {
+    for (let i = 0; i < this.set.length; i++) {
+      if (this.set[i] === key) {
+        this.set.splice(i, 1);
+        return;
+      }
+    }
+  }
+
+  contains (key) {
+    if (this.set.includes(key)) return true;
+    return false;
+  }
+};
