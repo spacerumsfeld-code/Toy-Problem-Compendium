@@ -16,7 +16,7 @@
 // 1 <= nums.length <= 105
 // -109 <= nums[i] <= 109
 
-var containsDuplicate = function(nums) {
+var containsDuplicate = function(nums: number[]): boolean {
   if (nums.length < 2) return false;
   let cache = new Set();
 
