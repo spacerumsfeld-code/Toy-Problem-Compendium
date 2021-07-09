@@ -140,3 +140,6 @@ class MyHashmap3 {
 360ms, faster than ~16%,
 48.7MB, better than ~42%
 */
+
+/* This is the only solution that actually hashes and handles collisions. More performant solutions are
+simply ignoring these facets so get faster speed. I am content with this solution */
