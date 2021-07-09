@@ -29,3 +29,8 @@ var singleNumber = function(nums: number[]): number {
 
   return set.values().next().value;
 };
+
+/* Performance eval:
+80ms, faster than ~87%,
+43.7MB, better than ~41%
+*/
