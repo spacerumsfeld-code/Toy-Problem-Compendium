@@ -135,3 +135,8 @@ class MyHashmap3 {
     }
   }
 }
+
+/* Performance eval:
+360ms, faster than ~16%,
+48.7MB, better than ~42%
+*/
