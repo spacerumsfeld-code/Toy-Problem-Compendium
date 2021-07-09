@@ -26,3 +26,8 @@ var containsDuplicate = function(nums) {
   }
   return false;
 };
+
+/* Performance eval:
+88ms, faster than ~67%
+44.7MB, faster than ~64%
+*/
