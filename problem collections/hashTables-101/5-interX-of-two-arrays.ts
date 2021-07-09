@@ -24,3 +24,8 @@ var intersection = function(nums1, nums2) {
 
   return [...intersection];
 };
+
+/* Performance eval:
+80ms, faster than 66%,
+40.6MB, faster than 26%
+*/
