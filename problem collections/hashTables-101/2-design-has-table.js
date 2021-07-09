@@ -84,6 +84,11 @@ class MyHashMap2 {
   }
 }
 
+/* Performance eval:
+220ms, faster than ~42%
+48.2MB, faster than ~74%
+*/
+
 class MyHashmap3 {
   constructor () {
     this.storage = Array.from({length: 1000}, el => []);
