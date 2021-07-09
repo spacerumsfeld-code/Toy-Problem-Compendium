@@ -33,6 +33,8 @@
 /**
  * Initialize your data structure here.
  */
+
+//note: this is an extremely rudimentary operation that does not address the common topics of collisions nor buckets. The below answer is a better approach to addressing these fundamental concepts of any hash table
  class MyHashMap {
   constructor () {
     this.storage = new Array(1_000_001)
@@ -68,10 +70,20 @@
   }
 };
 
-/**
- * Your MyHashMap object will be instantiated and called as such:
- * var obj = new MyHashMap()
- * obj.put(key,value)
- * var param_2 = obj.get(key)
- * obj.remove(key)
- */
+class MyHashMap2 {
+  constructor () {
+    this.storage = Array.from({length: 999_999}, x => []);
+  }
+
+  put () {
+
+  }
+
+  get () {
+
+  }
+
+  remove () {
+
+  }
+}
