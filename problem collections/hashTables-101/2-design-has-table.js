@@ -100,23 +100,38 @@ class MyHashmap3 {
 
   put (key, value) {
     let index = this._hash(key);
-    if (this.get(key) !== undefined) return null;
-    this.storage[index].push([key, value]);
+    let bucket = this.storage[index];
+    let update = false;
+
+    for (let i = 0; i < bucket.length; i++) {
+      if (bucket[i][0] === key) {
+        bucket[i] = [key, value];
+        update = true;
+        return;
+      }
+    }
+    if (!update) bucket.push([key, value]);
   }
 
   get (key) {
     let index = this._hash(key);
-    for (const [k , v] of this.storage[index]) {
+    let bucket = this.storage[index];
+
+    for (const [k , v] of bucket) {
       if (key === k) return v;
     }
     return -1;
-
   }
+
   remove (key) {
     let index = this._hash(key);
-    for (const  )
+    let bucket = this.storage[index];
 
+    for (let i = 0; i < bucket.length; i++) {
+      if (bucket[i][0] === key) {
+        bucket.splice(i, 1);
+        return;
+      }
+    }
   }
-
-
 }
