@@ -40,29 +40,23 @@
     this.storage = new Array(1_000_001)
   }
 
- * @param {number} key
- * @param {number} value
- * @return {void}
- */
   put (key, value) {
     this.storage[key] = value;
   }
 
- * @param {number} key
- * @return {number}
- */
   get (key) {
     return this.storage[key] === undefined ? -1 : this.storage[key];
 
   }
 
- * @param {number} key
- * @return {void}
- */
   remove (key) {
     this.storage[key] = undefined;
   }
 };
+
+/* Performance:
+abysmal (better than 8%, off the charts slow for memory use);
+*/
 
 //two array approach for constant time lookup (still does not avoid collision; each k-v pair always has its own spot
 class MyHashMap2 {
