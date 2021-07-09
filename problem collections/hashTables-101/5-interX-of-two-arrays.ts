@@ -13,10 +13,10 @@
 // 1 <= nums1.length, nums2.length <= 1000
 // 0 <= nums1[i], nums2[i] <= 1000
 
-var intersection = function(nums1, nums2) {
+var intersection = function(nums1: number[], nums2: number[]): number[] {
   let set1 = new Set(nums1);
   let set2 = new Set(nums2);
-  let intersection = new Set();
+  let intersection: Set<number> = new Set();
 
   for (const num of set1) {
     if (set2.has(num)) intersection.add(num);
