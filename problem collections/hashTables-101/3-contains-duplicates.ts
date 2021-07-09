@@ -15,3 +15,14 @@
 // Constraints:
 // 1 <= nums.length <= 105
 // -109 <= nums[i] <= 109
+
+var containsDuplicate = function(nums) {
+  if (nums.length < 2) return false;
+  let cache = new Set();
+
+  for (let int of nums) {
+    if (cache.has(int)) return true;
+    else cache.add(int);
+  }
+  return false;
+};
