@@ -18,3 +18,14 @@
 // 1 <= nums.length <= 3 * 104
 // -3 * 104 <= nums[i] <= 3 * 104
 // Each element in the array appears twice except for one element which appears only once.
+
+var singleNumber = function(nums: number[]): number {
+  let set = new Set();
+
+  for (const num of nums) {
+    if (set.has(num)) set.delete(num);
+    else set.add(num);
+  }
+
+  return set.values().next().value;
+};
