@@ -40,8 +40,6 @@
     this.storage = new Array(1_000_001)
   }
 
-  /**
- * value will always be non-negative.
  * @param {number} key
  * @param {number} value
  * @return {void}
@@ -50,8 +48,6 @@
     this.storage[key] = value;
   }
 
-  /**
- * Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key
  * @param {number} key
  * @return {number}
  */
@@ -60,8 +56,6 @@
 
   }
 
-  /**
- * Removes the mapping of the specified value key if this map contains a mapping for the key
  * @param {number} key
  * @return {void}
  */
@@ -70,20 +64,60 @@
   }
 };
 
+//two array approach for constant time lookup (still does not avoid collision; each k-v pair always has its own spot
 class MyHashMap2 {
   constructor () {
-    this.storage = Array.from({length: 999_999}, x => []);
+    this.keys = [];
+    this.values = [];
   }
 
-  put () {
+  put (key, value) {
+    if (this.key[key] === undefined) {
+      this.values.push(value);
+      this.key[key] = this.values.length - 1;
+    }
+  }
+
+  get (key) {
+    return this.values[this.keys[key]] === undefined ? -1 : this.values[this.keys[key]];
+  }
+
+  remove (key) {
+    if (this.keys[key] !== undefined) {
+      this.values[this.key[key]] = undefined
+      this.keys[key] = undefined;
+    }
+  }
+}
+
+class MyHashmap3 {
+  constructor () {
+    this.storage = Array.from({length: 1000}, el => []);
+  }
+
+  _hash (key) {
+    return key % 1000;
+  }
+
+  put (key, value) {
+    let index = this._hash(key);
+    if (this.get(key) !== undefined) return null;
+    this.storage[index].push([key, value]);
+  }
+
+  get (key) {
+    let index = this._hash(key);
+    for (const [k , v] of this.storage[index]) {
+      if (key === k) return v;
+    }
+    return -1;
+
+  }
+  remove (key) {
+    let index = this._hash(key);
+    for (const  )
 
   }
 
-  get () {
 
-  }
-
-  remove () {
-
-  }
 }
