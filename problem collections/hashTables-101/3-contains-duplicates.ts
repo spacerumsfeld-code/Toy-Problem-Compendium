@@ -31,3 +31,8 @@ var containsDuplicate = function(nums) {
 88ms, faster than ~67%
 44.7MB, faster than ~64%
 */
+
+/* Notes:
+whether a set performs faster than a standard object depends on context. When there are no duplicates,
+the object performs faster past a certain amount of elements, while on smaller arrays with duplicates, the set performs better. There is no "one" correct answer here.
+*/
