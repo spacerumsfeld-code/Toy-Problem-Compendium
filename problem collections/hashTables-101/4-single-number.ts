@@ -34,3 +34,6 @@ var singleNumber = function(nums: number[]): number {
 80ms, faster than ~87%,
 43.7MB, better than ~41%
 */
+
+/* Notes: this problem asked for constant space, but it is in the hashtables101 "hash set" collection so I wanted to explicitly use a set to learn more about the structure. Constant space solutions will use bitwise operations
+*/
