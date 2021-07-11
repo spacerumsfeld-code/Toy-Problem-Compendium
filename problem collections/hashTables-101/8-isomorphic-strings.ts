@@ -54,3 +54,8 @@ var isIsomorphic2 = function(s: string, t: string): boolean {
   }
   return true;
 };
+
+/* Performance eval:
+100ms, faster than ~37%,
+41.6MB, better than ~32%
+*/
