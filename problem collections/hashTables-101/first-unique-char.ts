@@ -30,3 +30,8 @@ var firstUniqChar = function(s: string): number {
   }
   return -1;
 };
+
+/* Perf eval:
+104ms, faster than ~42%,
+46.4MB, better than ~13%
+*/
