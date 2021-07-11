@@ -32,3 +32,8 @@ var containsNearbyDuplicate = function(nums: number[], k: number): boolean {
   }
   return false;
 };
+
+/* Performance eval:
+112ms, faster than ~65%,
+60.2MB, better than ~12%
+*/
