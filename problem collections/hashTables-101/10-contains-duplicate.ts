@@ -15,3 +15,18 @@
 // Constraints:
 // 1 <= s.length <= 105
 // s consists of only lowercase English letters.
+
+var firstUniqChar = function(s: string): number {
+  let map = new Map();
+
+  for (let i = 0; i < s.length; i++) {
+    let mapEntry = map.get(s[i]);
+    if (mapEntry) map.set(s[i], [mapEntry[0], mapEntry[1] + 1]);
+    else map.set(s[i], [i, 1]);
+  }
+
+  for (const [k, v] of map) {
+    if (v[1] === 1) return v[0]
+  }
+  return -1;
+};
