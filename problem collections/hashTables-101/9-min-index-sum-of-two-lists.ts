@@ -102,3 +102,37 @@
   */
 
   /* Notes: I had good intuitions to use a map and collect matches in a separate data structure. My code is longer than some solutions because I create a map out of the smaller list and not just the first list every time. Additionally, map operations got a bit complicated when comparing the indexSums, which I think was probably computationally complex. I am going to appropriate a solution below that uses an array rather than another map to hold matches, and only those that fall under the threshold of being a smaller indexSum than the current lowest. This is a key insight that I did not intuit for myself */
+
+  var findRestaurant2 = function(list1: string[], list2: string[]): string[] {
+    if (list1.length === 1 && list2.length === 1) return list1;
+
+    let smallList: string[];
+    let largeList: string[];
+    let map = new Map();
+    let result = [];
+    let smallestIdxSum = Number.MAX_SAFE_INTEGER;
+
+    if (list1.length <= list2.length) {
+      smallList = list1;
+      largeList = list2;
+    } else {
+      smallList = list2;
+      largeList = list1;
+    }
+
+    for (let i = 0; i < smallList.length; i++) {
+      map.set(smallList[i], i);
+    }
+
+    for (let j = 0; j < largeList.length; j++) {
+      if (map.has(largeList[j])) {
+        let sum = j + map.get(largeList[j]);
+        if (sum < smallestIdxSum) {
+          result = [ largeList[j] ];
+          smallestIdxSum = sum;
+        } else if (sum === smallestIdxSum) result.push(largeList[j]);
+      }
+    }
+
+    return result;
+  };
