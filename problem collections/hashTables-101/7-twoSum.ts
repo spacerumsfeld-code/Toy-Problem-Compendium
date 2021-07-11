@@ -40,3 +40,13 @@ var twoSum = function(nums: number[], target: number): number[] {
 104ms, faster than ~50%,
 41.4MB, better than ~12%
 */
+
+var twoSum2 = function(nums: number[], target: number): number[] {
+  let cache = {};
+
+  for (let i = 0; i < nums.length; i++) {
+    let solution = cache[target - nums[i]];
+    if (solution !== undefined) return [i, solution];
+    cache[nums[i]] = i;
+  }
+};
