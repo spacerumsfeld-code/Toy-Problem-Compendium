@@ -30,3 +30,69 @@
 // list1[i] and list2[i] consist of spaces ' ' and English letters.
 // All the stings of list1 are unique.
 // All the stings of list2 are unique.
+
+/**
+ * @param {string[]} list1
+ * @param {string[]} list2
+ * @return {string[]}
+
+
+ task: find the minIndexSum of two lists. The minIndex sum is the sum of indexes where items on BOTh lists occurs.
+
+ I: two string[]
+ O: string[]: strings in both lists that meet minIndexSum requirement.
+    If no item meets minIndexSum lowest requirement, output all items in both strings
+ C: both lists length is 1 - 1000 (not necessarily same), all strings in each unique (no duplicates)
+    list[i] composed of spaces and English letters, there will ALWAYS be a solution
+ E: both strings length of one, since there is always a solution, it must be the first item of string[]1
+
+ brainstorm:
+   edge case code: if both length of one, return [list1[0]]
+   create intersection map
+   create map out of smaller string
+     key = string, value = index
+   iterate over larger string
+     when match found (map contains current string), assign current string as key, current i + stored i in map to intersection map
+     we will have created a map of matching strings and their indexSums
+   evalute indexSums: first check if there is a unique lowestIndexSum
+     sort matchesMap values, if values[0] === values[1] then there is no unique lowest sum, return all matchesMap keys
+   otherwise iterate over map and compute lowestIndexSum, return that [string!]
+   */
+
+   var findRestaurant = function(list1: string[], list2: string[]): string[] {
+    if (list1.length === 1 && list2.length === 1) return list1;
+    let smallList: string[];
+    let smallListMap = new Map();
+    let largeList: string[];
+    let matches = new Map();
+
+    if (list1.length <= list2.length) {
+      smallList = list1;
+      largeList = list2;
+    } else {
+      smallList = list2;
+      largeList = list1;
+    }
+
+    for (let i = 0; i < smallList.length; i++) {
+      smallListMap.set(smallList[i], i);
+    }
+
+    for (let j = 0; j < largeList.length; j++) {
+      if (smallListMap.has(largeList[j])) matches.set(largeList[j], smallListMap.get(largeList[j]) + j);
+    }
+
+    let sortedMatches = [...matches.values()].sort((a, b) => a - b);
+    if (sortedMatches[0] === sortedMatches[1]) return [...matches.keys()];
+
+    let smallestIndexSum = [...matches.values()][0];
+    let result = [...matches.keys()][0];
+
+    for (const [k ,v] of matches) {
+      if (v < smallestIndexSum) {
+        smallestIndexSum = v;
+        result = k;
+      }
+    }
+    return [result];
+  };
