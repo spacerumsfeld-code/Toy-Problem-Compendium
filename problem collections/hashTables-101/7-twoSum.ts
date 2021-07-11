@@ -55,3 +55,7 @@ var twoSum2 = function(nums: number[], target: number): number[] {
 76ms, faster than ~90%,
 40.7MB, faster than ~22%
 */
+
+/* Notes:
+It seems in this context, where there is lots of READing and not a large amount of write/delete,
+a standard object literal is much faster. It seems to be the case that the Map is more useful for pure hash map functionality, namely, tons of write/overwrite, and on huge datasets. */
