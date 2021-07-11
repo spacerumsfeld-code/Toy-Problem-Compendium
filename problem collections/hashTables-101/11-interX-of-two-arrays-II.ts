@@ -38,3 +38,8 @@ var intersect = function(nums1: number[], nums2: number[]): number[] {
   }
   return result;
 };
+
+/* Performance eval:
+88ms, faster than ~36%,
+40.9MB, better than ~30%
+*/
