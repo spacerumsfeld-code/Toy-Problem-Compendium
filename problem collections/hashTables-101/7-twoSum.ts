@@ -50,3 +50,8 @@ var twoSum2 = function(nums: number[], target: number): number[] {
     cache[nums[i]] = i;
   }
 };
+
+/* Performance eval:
+76ms, faster than ~90%,
+40.7MB, faster than ~22%
+*/
