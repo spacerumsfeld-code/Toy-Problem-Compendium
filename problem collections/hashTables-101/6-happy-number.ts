@@ -22,3 +22,27 @@
 
 // Constraints:
 // 1 <= n <= 231 - 1
+
+const getDigits = (num: number): number[] => {
+  let digits = [];
+  while (num > 0) {
+    digits.push(num % 10);
+    num = Math.floor(num / 10);
+  }
+  return digits;
+}
+
+const findSumOfSquares = (arr: number[]): number => {
+  return arr.reduce((a, c) => a + c * c, 0);
+}
+
+var isHappy = function(n: number): boolean {
+  let set = new Set();
+  while (n !== 1) {
+    let digits = getDigits(n);
+    n = findSumOfSquares(digits);
+    if (set.has(n)) return false;
+    set.add(n);
+  }
+  return true;
+};
