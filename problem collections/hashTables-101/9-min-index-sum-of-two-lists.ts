@@ -133,6 +133,10 @@
         } else if (sum === smallestIdxSum) result.push(largeList[j]);
       }
     }
-
     return result;
   };
+
+  /* Performance eval:
+  100ms, faster than ~89%,
+  45.6MB, faster than ~74%
+  */
