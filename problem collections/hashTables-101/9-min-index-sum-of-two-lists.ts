@@ -96,3 +96,7 @@
     }
     return [result];
   };
+
+  /* 108ms, faster than ~28%,
+  47.2MB, better than ~57%
+  */
