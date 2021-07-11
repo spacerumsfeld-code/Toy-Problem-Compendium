@@ -21,3 +21,17 @@
 // 1 <= s.length <= 5 * 104
 // t.length == s.length
 // s and t consist of any valid ascii character.
+
+var isIsomorphic = function(s: string, t: string): boolean {
+  if (s.length === 1 && t.length === 1) return true;
+
+  let cache1 = {};
+  let cache2 = {};
+
+  for (let i = 0; i < s.length; i++) {
+    if (cache1[s[i]] === undefined) cache1[s[i]] = t[i];
+    if (cache2[t[i]] === undefined) cache2[t[i]] = s[i];
+    if (cache1[s[i]] !== t[i] || cache2[t[i]] !== s[i]) return false;
+  }
+  return true;
+};
