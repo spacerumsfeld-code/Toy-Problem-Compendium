@@ -53,3 +53,6 @@ var firstUniqChar2 = function(s: string): number {
 120ms, better than ~50%,
 41.9MB, better than ~86%
 */
+
+/* Notes: the simple object solution is clearly more performant than a map in this case. Perhaps it is because there is never a huge amount of writing/overwriting going on....though it seems to be a decent amount to me. There is more reading going on though, so perhaps that is why the simple dictionary works better
+*/
