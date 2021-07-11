@@ -35,3 +35,8 @@ var twoSum = function(nums: number[], target: number): number[] {
     map.set(nums[i], i);
   }
 };
+
+/* Performance eval:
+104ms, faster than ~50%,
+41.4MB, better than ~12%
+*/
