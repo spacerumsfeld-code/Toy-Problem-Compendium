@@ -35,3 +35,8 @@ var isIsomorphic = function(s: string, t: string): boolean {
   }
   return true;
 };
+
+/* Performance eval:
+108ms, faster than ~26% of solutions,
+41.2MB, better than ~41%
+*/
