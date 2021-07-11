@@ -48,3 +48,8 @@ var firstUniqChar2 = function(s: string): number {
   }
   return -1;
 };
+
+/* Performance eval:
+120ms, better than ~50%,
+41.9MB, better than ~86%
+*/
