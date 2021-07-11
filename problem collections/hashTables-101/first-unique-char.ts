@@ -35,3 +35,16 @@ var firstUniqChar = function(s: string): number {
 104ms, faster than ~42%,
 46.4MB, better than ~13%
 */
+
+var firstUniqChar2 = function(s: string): number {
+  let cache = {};
+
+  for (let i = 0; i < s.length; i++) {
+    cache[s[i]] = ++cache[s[i]] || 1;
+  }
+
+  for (let j = 0; j < s.length; j++) {
+    if (cache[s[j]] === 1) return j;
+  }
+  return -1;
+};
