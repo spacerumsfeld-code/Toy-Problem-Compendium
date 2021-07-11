@@ -17,3 +17,24 @@
 // What if the given array is already sorted? How would you optimize your algorithm?
 // What if nums1's size is small compared to nums2's size? Which algorithm is better?
 // What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
+
+var intersect = function(nums1: number[], nums2: number[]): number[] {
+  let map = new Map();
+  let result = [];
+  let small = nums1.length <= nums2.length ? nums1 : nums2;
+  let large = nums2.length >= nums1.length ? nums2 : nums1;
+
+  for (const num of small) {
+    let freq = map.get(num) || 0;
+    map.set(num, ++freq);
+  }
+
+  for (let i = 0; i < large.length; i++) {
+    let freq = map.get(large[i]);
+    if (freq) {
+      result.push(large[i]);
+      map.set(large[i], --freq);
+    }
+  }
+  return result;
+};
