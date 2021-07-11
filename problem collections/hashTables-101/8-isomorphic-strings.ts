@@ -40,3 +40,17 @@ var isIsomorphic = function(s: string, t: string): boolean {
 108ms, faster than ~26% of solutions,
 41.2MB, better than ~41%
 */
+
+var isIsomorphic2 = function(s: string, t: string): boolean {
+  if (s.length === 1 && t.length === 1) return true;
+
+  let cache1 = new Map();
+  let cache2 = new Map();
+
+  for (let i = 0; i < s.length; i++) {
+    if (!cache1.get(s[i])) cache1.set(s[i], t[i]);
+    if (!cache2.get(t[i])) cache2.set(t[i], s[i]);
+    if (cache1.get(s[i]) !== t[i] || cache2.get(t[i]) !== s[i]) return false;
+  }
+  return true;
+};
