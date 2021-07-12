@@ -37,3 +37,5 @@ var groupAnagrams = function(strs: string[]): string[][] {
 108ms, faster than ~99%,
 48.6MB, better than ~92%
 */
+
+/* Notes: my first medium problem! I am proud of the results */
