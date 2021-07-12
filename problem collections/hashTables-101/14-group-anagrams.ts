@@ -18,3 +18,17 @@
 // 1 <= strs.length <= 104
 // 0 <= strs[i].length <= 100
 // strs[i] consists of lower-case English letters.
+
+var groupAnagrams = function(strs: string[]): string[][] {
+  if (strs.length < 2) return [strs];
+  let map = new Map();
+
+  for (const str of strs) {
+    let sortedWord = [...str].sort().join('');
+    let bucket = map.get(sortedWord);
+    if (!bucket) map.set(sortedWord, [str]);
+    else bucket.push(str);
+  }
+
+  return [...map.values()];
+};
