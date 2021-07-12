@@ -32,3 +32,8 @@ var groupAnagrams = function(strs: string[]): string[][] {
 
   return [...map.values()];
 };
+
+/* Performance eval:
+108ms, faster than ~99%,
+48.6MB, better than ~92%
+*/
