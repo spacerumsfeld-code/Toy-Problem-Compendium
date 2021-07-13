@@ -18,3 +18,28 @@
 // 1 <= strings.length <= 200
 // 1 <= strings[i].length <= 50
 // strings[i] consists of lowercase English letters.
+
+var groupStrings = function(strings: string[]): string[][] {
+  let map = new Map();
+
+  for (let string of strings) {
+    let sequence = '';
+    for (let i = 1; i < string.length; i++) {
+      let diff = string.charCodeAt(i) - string.charCodeAt(i - 1);
+      if (diff < 0) diff += 26;
+      sequence += diff + '-';
+    }
+    if (map.has(sequence)) {
+      map.get(sequence).push(string);
+    } else {
+      map.set(sequence, [string]);
+    }
+  }
+
+  return [...map.values()];
+};
+
+/* Performance eval:
+104ms, faster than ~15%,
+40.6MB, better than ~76%
+*/
