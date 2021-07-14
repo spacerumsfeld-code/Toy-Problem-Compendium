@@ -15,7 +15,7 @@
 // jewels and stones consist of only English letters.
 // All the characters of jewels are unique.
 
-var numJewelsInStones = function(jewels, stones) {
+var numJewelsInStones = function(jewels: string, stones: string): number {
   let map = new Map();
   let jewelCount = 0;
 
@@ -29,3 +29,10 @@ var numJewelsInStones = function(jewels, stones) {
 
   return jewelCount;
 };
+
+/* Performance eval:
+72ms, faster than ~95%,
+40.3MB, better than ~35%
+*/
+
+/* Notes: the least memory-intensive solutions do not use any additional structure but have bad time complexity (nested loops, indexOf inside loop, etc.). Better time complexity solutions used a set, which at first seems weird, but makes sense: we only care about the value. With a map, I needed to set a completely superfluous value for each key. Some solutions that were faster used a standard object as well. */
