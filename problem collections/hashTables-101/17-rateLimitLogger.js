@@ -49,3 +49,8 @@ class Logger {
     }
   }
 }
+
+/* Performance eval:
+156ms, faster than ~78%,
+48.2MB, better than ~78%
+*/
