@@ -23,3 +23,17 @@
 // Constraints:
 // 0 <= s.length <= 5 * 104
 // s consists of English letters, digits, symbols and spaces.
+
+var lengthOfLongestSubstring = function(s) {
+  let start = 0;
+  let max = 0;
+  let map = new Map();
+
+  for (let i = 0; i < s.length; i++) {
+    const char = s[i];
+    if (map.get(char) >= start) start = map.get(char) + 1;
+    map.set(char, i);
+    max = Math.max(max, i - start + 1);
+  }
+  return max;
+};
