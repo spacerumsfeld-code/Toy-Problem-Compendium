@@ -27,3 +27,28 @@
 // -231 <= val <= 231 - 1
 // At most 2 * 105 calls will be made to insert, remove, and getRandom.
 // There will be at least one element in the data structure when getRandom is called.
+
+class RandomizedSet {
+  constructor () {
+    this.set = new Set();
+  }
+
+  insert (val) {
+    if (this.set.has(val)) return false;
+    this.set.add(val);
+    return true;
+  }
+
+  remove (val) {
+    if (this.set.has(val)) {
+      this.set.delete(val);
+      return true;
+    }
+    return false;
+  }
+
+  getRandom () {
+    const values = [...this.set];
+    return values[Math.floor(Math.random() * values.length)];
+  }
+}
