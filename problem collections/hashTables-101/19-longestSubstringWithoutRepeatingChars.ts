@@ -37,3 +37,8 @@ var lengthOfLongestSubstring = function(s) {
   }
   return max;
 };
+
+/* Perf eval:
+72ms, faster than 100%,
+40.7MB, better than ~97%
+*/
