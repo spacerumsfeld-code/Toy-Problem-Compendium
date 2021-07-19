@@ -14,3 +14,14 @@
 // It is guaranteed that the answer is unique.
 
 // Follow up: Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
+
+var topKFrequent = function(nums: number[], k: number): number[] {
+  let map = new Map();
+
+  for (const num of nums) {
+    if (map.has(num)) map.set(num, map.get(num) + 1);
+    else map.set(num, 1);
+  }
+
+  return [...map].sort((a, b) => b[1] - a[1]).slice(0, k).map(el => el[0]);
+};
