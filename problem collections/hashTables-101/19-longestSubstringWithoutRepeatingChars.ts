@@ -42,3 +42,5 @@ var lengthOfLongestSubstring = function(s) {
 72ms, faster than 100%,
 40.7MB, better than ~97%
 */
+
+/* Note: I'd love to take credit for this one, but this is someone else's solution. The key insight is to update a char's value in the map with the last index where it occured. Another insight is to compute the max substring length by current index - i + 1; I would have taken quite a while to come up with this combo. Intuitively I would have used a sliding window with pointers but I wanted to try it with a map. */
