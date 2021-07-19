@@ -25,3 +25,8 @@ var topKFrequent = function(nums: number[], k: number): number[] {
 
   return [...map].sort((a, b) => b[1] - a[1]).slice(0, k).map(el => el[0]);
 };
+
+/* Perf eval:
+75ms, faster than ~99%,
+41.9MB, better than ~69%
+*/
