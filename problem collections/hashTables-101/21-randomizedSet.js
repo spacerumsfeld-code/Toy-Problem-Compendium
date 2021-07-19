@@ -52,3 +52,8 @@ class RandomizedSet {
     return values[Math.floor(Math.random() * values.length)];
   }
 }
+
+/* Perf eval:
+472ms, faster than ~30%,
+88.3MB, better than ~36%
+*/
