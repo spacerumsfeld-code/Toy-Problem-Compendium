@@ -57,3 +57,5 @@ class RandomizedSet {
 472ms, faster than ~30%,
 88.3MB, better than ~36%
 */
+
+/* Notes: the intent of this problem was unclear, but it seems we were supposed to build without using the Set structure (the problem description is ambiguous about this). When I revisit this problem, I will design the solution accordingly /*
