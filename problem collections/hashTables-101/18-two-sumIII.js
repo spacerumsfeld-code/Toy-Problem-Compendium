@@ -49,3 +49,5 @@ class TwoSum {
 ??, better than ?? --My solutuon was 168ms, and the range for this problem is gigantic (up to 8000ms+). The graph doesn't even show where I'm at but given the provided range, it is better than 80-90%
 50.6MB, better than ~83%
 */
+
+/* Notes: This is a borrowed solution; I did not think to use a boolean as value in the map to track if there is a duplicate value present. Instead, I thought a bit more literally and wanted to use an array to store values. This solution is far superior as we do not care how many more of a given value there is; we just need to know that there IS another to return a proper solution */
