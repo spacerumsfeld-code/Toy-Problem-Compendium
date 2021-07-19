@@ -28,3 +28,24 @@
 // Every timestamp will be passed in non-decreasing order (chronological order).
 // 1 <= message.length <= 30
 // At most 104 calls will be made to shouldPrintMessage.
+
+class Logger {
+  constructor() {
+    this.map = new Map();
+  }
+
+  shouldPrintMessage (timestamp, message) {
+    let nextPrint = this.map.get(message);
+    if (nextPrint !== undefined) {
+      if (timestamp >= nextPrint) {
+        this.map.set(message, timestamp + 10);
+        return true;
+      } else {
+        return false;
+      }
+    } else {
+      this.map.set(message, timestamp + 10);
+      return true;
+    }
+  }
+}
