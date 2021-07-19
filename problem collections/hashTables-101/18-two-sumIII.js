@@ -25,3 +25,22 @@
 // -105 <= number <= 105
 // -231 <= value <= 231 - 1
 // At most 5 * 104 calls will be made to add and find.
+class TwoSum {
+  constructor () {
+   this.map = new Map();
+ }
+
+  add (num) {
+    if (this.map.has(num)) this.map.set(num, true);
+    else this.map.set(num, false);
+  }
+
+  find (target) {
+    for (const key of this.map.keys()) {
+      const diff = target - key;
+      if (diff === key && this.map.get(diff)) return true;
+      else if (diff !== key && this.map.has(diff)) return true;
+    }
+    return false;
+  }
+}
