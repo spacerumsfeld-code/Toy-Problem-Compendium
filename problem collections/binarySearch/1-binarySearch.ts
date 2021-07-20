@@ -32,3 +32,8 @@ var search = function(nums: number[], target: number): number {
   if (nums[mid] === target) return mid;
   return -1;
 };
+
+/* Perf eval
+76ms, faster than ~85%,
+42.2MB, better than ~64%
+*/
