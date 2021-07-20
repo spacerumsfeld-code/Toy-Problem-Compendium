@@ -15,3 +15,21 @@
 
 // Constraints:
 // 0 <= x <= 231 - 1
+
+var mySqrt = function(x: number): number {
+  let start = 0;
+  let end = x;
+
+  while (start <= end) {
+    const mid = Math.floor((start + end) / 2);
+    if (mid * mid === x) return mid;
+    if (mid * mid > x) end = mid - 1;
+    else start = mid + 1;
+  }
+  return end;
+};
+
+/* Perf eval:
+92ms, faster than ~75%,
+40.7MB, better than ~11%
+*/
