@@ -30,3 +30,16 @@
 // -5000 <= nums[i] <= 5000
 // All the integers of nums are unique.
 // nums is sorted and rotated between 1 and n times.
+
+var findMin = function(nums: number[]): number {
+  let start = 0;
+  let end = nums.length - 1;
+
+  while (start < end) {
+    let mid = Math.floor((start + end) / 2);
+    if (nums[mid] > nums[end]) start = mid + 1;
+    else end = mid;
+
+  }
+  return nums[start];
+};
