@@ -24,3 +24,22 @@
 // All values of nums are unique.
 // nums is guaranteed to be rotated at some pivot.
 // -104 <= target <= 104
+
+var search = function(nums: number[], target: number): number {
+  let start = 0;
+  let end = nums.length - 1;
+  let mid = Math.floor((start + end) / 2);
+
+  while (start <= end) {
+    if (nums[mid] === target) return mid;
+    if (nums[start] <= nums[mid]) {
+      if (nums[start] <= target && target < nums[mid]) end = mid - 1;
+      else start = mid + 1;
+    } else {
+      if (nums[mid] < target && target <= nums[end]) start = mid + 1;
+      else end = mid - 1;
+      }
+    mid = Math.floor((start + end) / 2);
+  }
+  return -1;
+};
