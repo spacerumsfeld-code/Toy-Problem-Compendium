@@ -19,3 +19,27 @@
 
 // Constraints:
 // 1 <= bad <= n <= 231 - 1
+
+var solution = function(isBadVersion) {
+  /**
+   * @param {integer} n Total versions
+   * @return {integer} The first bad version
+   */
+  return function(n) {
+    let start = 1;
+    let end = n;
+    let mid = Math.floor((start + end) / 2);
+    let lastBadVersion;
+
+    while (start <= end) {
+      if (isBadVersion(mid)) {
+        lastBadVersion = mid;
+        end = mid - 1;
+      } else {
+        start = mid + 1;
+      }
+      mid = Math.floor((start + end) / 2);
+    }
+    return lastBadVersion;
+  };
+};
