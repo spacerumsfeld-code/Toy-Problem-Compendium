@@ -30,3 +30,17 @@
 // Constraints:
 // 1 <= n <= 231 - 1
 // 1 <= pick <= n
+
+var guessNumber = function(n: number): number {
+  let start = 1;
+  let end = n;
+  let mid = Math.floor((start + end) / 2);
+
+  while (start <= end) {
+    const myGuess = guess(mid);
+    if (myGuess === 0) return mid;
+    if (myGuess === -1) end = mid - 1;
+    if (myGuess === 1) start = mid + 1;
+    mid = Math.floor((start + end) / 2);
+  }
+};
