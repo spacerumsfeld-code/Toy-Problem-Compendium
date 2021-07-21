@@ -65,4 +65,9 @@ var guessNumber2 = function(n) {
     mid = Math.floor((start + end) / 2)
   }
 };
+/* I added a switch/case alternative see how switches perform in such cases. As we see below, they generally are more performant: the switch is evaluated only once, not once in every conditional; and, breaks let the operation terminate quicker than going through any additional conditionals that are not relevant */
 
+/* Perf eval:
+64ms, faster than ~98%,
+39MB, pretty slow
+*/
