@@ -44,3 +44,25 @@ var guessNumber = function(n: number): number {
     mid = Math.floor((start + end) / 2);
   }
 };
+
+var guessNumber2 = function(n) {
+  let start = 1;
+  let end = n;
+  let mid = Math.floor((start + end) / 2);
+
+  while (start <= end) {
+    const status = guess(mid);
+    switch (status) {
+      case 0:
+        return mid;
+      case -1:
+        end = mid - 1;
+        break;
+      case 1:
+        start = mid + 1;
+        break;
+    }
+    mid = Math.floor((start + end) / 2)
+  }
+};
+
