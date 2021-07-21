@@ -43,3 +43,8 @@ var solution = function(isBadVersion) {
     return lastBadVersion;
   };
 };
+
+/* Perf eval:
+68ms, faster than ~90%,
+38.5MB, better than ~52%
+*/
