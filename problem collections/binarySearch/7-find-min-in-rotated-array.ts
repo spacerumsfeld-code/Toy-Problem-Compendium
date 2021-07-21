@@ -43,3 +43,8 @@ var findMin = function(nums: number[]): number {
   }
   return nums[start];
 };
+
+/* Perf eval:
+68ms, faster than ~92%,
+39MB, better than ~25%
+*/
