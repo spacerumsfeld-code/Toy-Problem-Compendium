@@ -43,3 +43,8 @@ var search = function(nums: number[], target: number): number {
   }
   return -1;
 };
+
+/* Perf eval:
+76ms, faster than ~76%,
+40MB, better than ~29%
+*/
