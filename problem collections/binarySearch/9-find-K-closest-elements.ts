@@ -18,3 +18,28 @@
 // 1 <= arr.length <= 104
 // arr is sorted in ascending order.
 // -104 <= arr[i], x <= 104
+
+// task: given a number[] that is sorted and integers k and x, find the k closest elements to x
+// an integer a is closer to x than b if |a - x| < |b - x| || |a - x|=|b - x| && a < b
+
+// I: number[]
+// O: number[]
+// C: arr never empty, always sorted,
+// E: arr empty. not happening. arr.length === 1, just use normal computations (edge case code not necessarily)
+
+// solution:
+//   look at advanced solutions as I haven't quite come up with anything on my own. It's a learning process
+//   */
+
+var findClosestElements = function(arr: number[], k: number, x: number): number[] {
+  let start = 0;
+  let end = arr.length - k;
+
+  while (start < end) {
+    const mid = Math.floor((start + end) / 2);
+    if (x - arr[mid] > arr[mid + k] - x) start = mid + 1;
+    else end = mid;
+  }
+
+  return arr.slice(start, start + k);
+};
