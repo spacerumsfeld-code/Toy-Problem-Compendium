@@ -21,3 +21,28 @@
 // -109 <= nums[i] <= 109
 // nums is a non-decreasing array.
 // -109 <= target <= 109
+
+var searchRange = function(nums: number[], target: number): number[] {
+  return [binarySearch(nums, target), binarySearch(nums, target, false)];
+};
+
+function binarySearch(arr: number[], target: number, firstSearch=true) {
+  let start = 0;
+  let end = arr.length - 1;
+
+  while (start <= end) {
+    const mid = Math.floor((start + end) / 2);
+    if (arr[mid] > target) end = mid - 1;
+    else if (arr[mid] < target) start = mid + 1;
+    else {
+      if (firstSearch) {
+        if (arr[mid - 1] === target) end = mid - 1;
+        else return mid;
+      } else {
+        if (arr[mid + 1] === target) start = mid + 1;
+        else return mid;
+      }
+    }
+  }
+  return -1;
+};
