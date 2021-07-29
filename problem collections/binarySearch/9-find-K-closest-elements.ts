@@ -43,3 +43,8 @@ var findClosestElements = function(arr: number[], k: number, x: number): number[
 
   return arr.slice(start, start + k);
 };
+
+/* Performance eval:
+104ms, faster than ~78%,
+44.8MB, better than ~80%
+*/
