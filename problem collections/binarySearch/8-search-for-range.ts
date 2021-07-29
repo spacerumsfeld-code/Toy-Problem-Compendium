@@ -46,3 +46,8 @@ function binarySearch(arr: number[], target: number, firstSearch=true) {
   }
   return -1;
 };
+
+/* Performance eval:
+76ms, faster than ~71%,
+40.1MB, better than ~65%
+*/
