@@ -7,7 +7,8 @@
 // Return the leftmost pivot index. If no such index exists, return -1.
 
 // Example 1:
-// Input: nums = [1,7,3,6,5,6]
+// Input: nums = [2,3,4,5,6]
+//hallelujah
 // Output: 3
 // Explanation:
 // The pivot index is 3.
